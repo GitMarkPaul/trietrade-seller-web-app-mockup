@@ -1,0 +1,14 @@
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--card-box-shadow);
+
+    .dropdown-item {
+        display: inline-flex;
+        align-items: center;
+
+        span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

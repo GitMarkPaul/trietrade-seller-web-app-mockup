@@ -1,0 +1,19 @@
+.card {
+    box-shadow: var(--card-box-shadow);
+    border: none;
+    border-radius: 0.5rem;
+
+    .card-header {
+        background-color: var(--color-white);
+    }
+
+    .card-img-top {
+        object-fit: cover;
+    }
+
+    .card-body {
+        .card-title {
+            font-size: 18px;
+        }
+    }
+}

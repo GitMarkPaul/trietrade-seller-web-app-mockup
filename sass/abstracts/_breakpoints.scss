@@ -1,0 +1,37 @@
+@media only screen and (max-width: 567px) {
+    // Typography
+    span, p {
+        font-size: 12px;
+    }
+
+    // Container
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .authenticated-user {
+        display: none;
+    }
+
+    // Notification Wrapper
+    .notification-wrapper-toggle {
+        width: 350px;
+    }
+
+    // Sidebar
+    .sidebar {
+        position: fixed;
+        background: var(--color-white);
+        z-index: 99;
+        width: 350px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+    }
+
+    #toggle-sidebar {
+        display: block;
+    }
+}

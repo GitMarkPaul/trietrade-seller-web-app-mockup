@@ -1,0 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumbs layouts.
+// -----------------------------------------------------------------------------
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+}

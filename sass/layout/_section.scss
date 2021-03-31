@@ -1,0 +1,22 @@
+// Section
+section { 
+    .section-heading { 
+        padding-bottom: 0.6rem;  
+        .section-heading-title { 
+            font-size: 18px; 
+            font-weight: 500;  
+        }
+    }
+}
+
+.section-justify-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+main {
+    padding: 80px 0;
+}

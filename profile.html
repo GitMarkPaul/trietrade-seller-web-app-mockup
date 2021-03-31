@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trietrade Seller Center</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+	<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+	<!-- Ionic Modules -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="sass/main.css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<div class="navbar-content">
+					<div class="d-flex align-items-center">
+						<button type="button" class="btn btn-default me-1" id="toggle-sidebar"><ion-icon name="menu-sharp" class="fs-4"></ion-icon></button>
+						<a class="navbar-brand" href="#">
+							<img src="img/trietrade-logo.png" alt="Trietrade Seller Center" width="150">
+						</a>
+					</div>
+	
+					<ul class="d-flex align-items-center">
+						<li>
+							<div class="btn-group">
+								<button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="img/user.jpg" alt="" class="rounded-circle" width="25" height="25">
+									<span class="ms-2 authenticated-user">Juan Dela Cruz</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+									<li><a class="dropdown-item" href="#">Account Settings</a></li>
+									<li>
+										<a class="dropdown-item" href="">Logout</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div class="row g-4">
+		<div class="col-xl-2" id="sidebar-wrapper">
+			<aside class="sidebar">
+				<div class="container-fluid">
+					<ul class="sidebar-menu">
+						<li class="sidebar-menu-items">
+							<a href="index.html" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="home-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Home</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="manage-products.html" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="bag-handle-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Products</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="cart-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Orders</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="promotion.html" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="pricetags-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Promotions</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="card-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Remittances</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="videocam-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Live Selling</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="help-circle-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Contact Support</span>   
+							</a>
+						</li>
+						<li class="sidebar-menu-items">
+							<a href="" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="settings-sharp"></ion-icon>
+								</div>
+								<span class="ms-2">Settings</span>   
+							</a>
+						</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+
+		<div class="col-xl-10">
+			<main>
+				<section>
+					<div class="container-fluid">
+						<!-- Breadcrumb -->
+						<div class="mb-4">
+							<h4>My Profile</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">My Account</li>
+                                </ol>
+                            </nav>
+						</div>
+						<!-- End Breadcrumb -->
+						
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Profile</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Store Information</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Bank Information</button>
+                                    </li>
+                                </ul>
+    
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <form action="">
+                                                    <div class="row g-3">
+                                                        <div class="col-xl-12">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/user.jpg" alt="Username" class="rounded-circle" width="130" height="130">
+                                                                <div class="ms-3">
+                                                                    <h4>Juan Dela Cruz</h4>
+                                                                    <p class="text-muted">jdc@gmail.com</p>
+                                                                    <button type="button" class="btn btn-primary d-flex align-items-center"><ion-icon name="camera-sharp" class="me-2"></ion-icon> Change Profile Picture</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="fname" class="form-label">First Name</label>
+                                                                <input type="text" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="mname" class="form-label">Middle Name</label>
+                                                                <input type="text" class="form-control" placeholder="Dela">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Last Name</label>
+                                                                <input type="text" class="form-control" placeholder="Cruz">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="email" class="form-label">Email</label>
+                                                                <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="email" class="form-label">YouTube Channel Email </label>
+                                                                <input type="email" class="form-control" placeholder="jdc.youtube@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="phone" class="form-label">Phone Number</label>
+                                                                <input type="tel" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="birthdate" class="form-label">Birthdate</label>
+                                                                <input type="date" class="form-control" placeholder="Dela">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Gender</label>
+                                                                <select name="" class="form-select form-control">
+                                                                    <option selected disable>-- select --</option>
+                                                                    <option value="Male">Male</option>
+                                                                    <option value="Female">Female</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12">
+                                                            <div class="d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <form action="">
+                                                    <div class="row g-3">
+                                                        <div class="col-xl-12">
+                                                            <div class="d-flex align-items-center">
+                                                                <img src="img/user.jpg" alt="Username" class="rounded-circle" width="130" height="130">
+                                                                <div class="ms-3">
+                                                                    <h4>JDC Merchandize Store</h4>
+                                                                    <p class="text-muted">Seller ID: kO8pR4T0d6</p>
+                                                                    <button type="button" class="btn btn-primary d-flex align-items-center"><ion-icon name="camera-sharp" class="me-2"></ion-icon> Change Store Picture</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="fname" class="form-label">Name On ID</label>
+                                                                <input type="text" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="phone" class="form-label">Phone Number</label>
+                                                                <input type="tel" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Display Name / Shop Name</label>
+                                                                <input type="text" class="form-control" placeholder="Cruz">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="email" class="form-label">Street Address</label>
+                                                                <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Province</label>
+                                                                <select name="" class="form-select form-control">
+                                                                    <option selected disable>-- select --</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">City / Municipality</label>
+                                                                <select name="" class="form-select form-control">
+                                                                    <option selected disable>-- select --</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Barangay</label>
+                                                                <select name="" class="form-select form-control">
+                                                                    <option selected disable>-- select --</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="zipcode" class="form-label">Zip Code</label>
+                                                                <input type="number" class="form-control" placeholder="1234">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12">
+                                                            <div class="d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <form action="">
+                                                    <div class="row g-3">
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="fname" class="form-label">Account Name</label>
+                                                                <input type="text" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="phone" class="form-label">Account Number</label>
+                                                                <input type="number" class="form-control" placeholder="Juan">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-4">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Bank Name</label>
+                                                                <select name="" class="form-select form-control">
+                                                                    <option selected disable>-- select --</option>
+                                                                    <option value="AL-AMANAH ISLAMIC INVESTMENT BANK" >AL-AMANAH ISLAMIC INVESTMENT BANK</option>
+                                                                    <option value="ASIA UNITED BANK CORPORATION" >ASIA UNITED BANK CORPORATION</option>
+                                                                    <option value="ASIAN DEVELOPMENT BANK" >ASIAN DEVELOPMENT BANK</option>
+                                                                    <option value="AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED" >AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED</option>
+                                                                    <option value="BANGKOK BANK PUBLIC COMPANY LIMITED MANILA BRANCH" >BANGKOK BANK PUBLIC COMPANY LIMITED MANILA BRANCH</option>
+                                                                    <option value="BANK OF AMERICA N.A. MANILA" >BANK OF AMERICA N.A. MANILA</option>
+                                                                    <option value="BANK OF CHINA" >BANK OF CHINA</option>
+                                                                    <option value="BANK OF COMMERCE" >BANK OF COMMERCE</option>
+                                                                    <option value="BANK OF THE PHILIPPINE ISLANDS" >BANK OF THE PHILIPPINE ISLANDS</option>
+                                                                    <option value="BANK OF TOKYO MITSUBISHI UFJ LTD. THE" >BANK OF TOKYO MITSUBISHI UFJ LTD. THE</option>
+                                                                    <option value="BDO UNIBANK INC." >BDO UNIBANK INC.</option>
+                                                                    <option value="BNP PARIBAS MANILA OFFSHORE BRANCH" >BNP PARIBAS MANILA OFFSHORE BRANCH</option>
+                                                                    <option value="BPI FAMILY SAVINGS BANK" >BPI FAMILY SAVINGS BANK</option>
+                                                                    <option value="CHINA BANK SAVINGS, INC." >CHINA BANK SAVINGS, INC.</option>
+                                                                    <option value="CHINA BANKING CORPORATION" >CHINA BANKING CORPORATION</option>
+                                                                    <option value="CHINATRUST (PHILS.) COMMERCIAL BANK MANILA" >CHINATRUST (PHILS.) COMMERCIAL BANK MANILA</option>
+                                                                    <option value="CIMB BANK PHILS., INC." >CIMB BANK PHILS., INC.</option>
+                                                                    <option value="CITIBANK N.A. MANILA BRANCH" >CITIBANK N.A. MANILA BRANCH</option>
+                                                                    <option value="CITIBANK SAVINGS INC." >CITIBANK SAVINGS INC.</option>
+                                                                    <option value="CTBC BANK PHILIPPINES CORP." >CTBC BANK PHILIPPINES CORP.</option>
+                                                                    <option value="DCPAY PHILIPPINES (COINS.PH)" >DCPAY PHILIPPINES (COINS.PH)</option>
+                                                                    <option value="DEUTSCHE BANK AG" >DEUTSCHE BANK AG</option>
+                                                                    <option value="DEVELOPMENT BANK OF THE PHILIPPINES" >DEVELOPMENT BANK OF THE PHILIPPINES</option>
+                                                                    <option value="DUNGGANON BANK, INC." >DUNGGANON BANK, INC.</option>
+                                                                    <option value="EAST WEST BANKING CORPORATION" >EAST WEST BANKING CORPORATION</option>
+                                                                    <option value="EQUICOM SAVINGS BANK" >EQUICOM SAVINGS BANK</option>
+                                                                    <option value="FIRST CONSOLIDATED BANK" >FIRST CONSOLIDATED BANK</option>
+                                                                    <option value="HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED THE" >HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED THE</option>
+                                                                    <option value="HSBC SAVINGS BANK (PHILIPINES) INC." >HSBC SAVINGS BANK (PHILIPINES) INC.</option>
+                                                                    <option value="INDUSTRIAL BANK OF KOREA - MANILA" >INDUSTRIAL BANK OF KOREA - MANILA</option>
+                                                                    <option value="ING BANK N.V." >ING BANK N.V.</option>
+                                                                    <option value="JPMORGAN CHASE BANK N.A. MANILA BRANCH" >JPMORGAN CHASE BANK N.A. MANILA BRANCH</option>
+                                                                    <option value="KEB HANA BANK" >KEB HANA BANK</option>
+                                                                    <option value="KOREA EXCHANGE BANK" >KOREA EXCHANGE BANK</option>
+                                                                    <option value="LAND BANK OF THE PHILIPPINES" >LAND BANK OF THE PHILIPPINES</option>
+                                                                    <option value="MAYBANK PHILIPPINES INC" >MAYBANK PHILIPPINES INC</option>
+                                                                    <option value="MEGA INTERNATIONAL COMMERCIAL BANK CO. LTD. MANILA BRANCH" >MEGA INTERNATIONAL COMMERCIAL BANK CO. LTD. MANILA BRANCH</option>
+                                                                    <option value="METROPOLITAN BANK AND TRUST CO." >METROPOLITAN BANK AND TRUST CO.</option>
+                                                                    <option value="MIZUHO BANK LTD. MANILA BRANCH" >MIZUHO BANK LTD. MANILA BRANCH</option>
+                                                                    <option value="MUFG BANK, LTD" >MUFG BANK, LTD</option>
+                                                                    <option value="NESTLE BUSINESS SERVICES AOA INC" >NESTLE BUSINESS SERVICES AOA INC</option>
+                                                                    <option value="PHILIPPINE BANK OF COMMUNICATIONS" >PHILIPPINE BANK OF COMMUNICATIONS</option>
+                                                                    <option value="PHILIPPINE BUSINESS BANK, INC." >PHILIPPINE BUSINESS BANK, INC.</option>
+                                                                    <option value="PHILIPPINE NATIONAL BANK" >PHILIPPINE NATIONAL BANK</option>
+                                                                    <option value="PHILIPPINE SAVINGS BANK" >PHILIPPINE SAVINGS BANK</option>
+                                                                    <option value="PHILIPPINE VETERANS BANK" >PHILIPPINE VETERANS BANK</option>
+                                                                    <option value="PHILTRUST BANK (PHILIPPINE TRUST COMPANY)" >PHILTRUST BANK (PHILIPPINE TRUST COMPANY)</option>
+                                                                    <option value="PRODUCERS SAVINGS BANK CORPORATION" >PRODUCERS SAVINGS BANK CORPORATION</option>
+                                                                    <option value="RIZAL COMMERCIAL BANKING CORP." >RIZAL COMMERCIAL BANKING CORP.</option>
+                                                                    <option value="ROBINSONS BANK CORPORATION" >ROBINSONS BANK CORPORATION</option>
+                                                                    <option value="SECURITY BANK CORPORATION" >SECURITY BANK CORPORATION</option>
+                                                                    <option value="SHINHAN BANK" >SHINHAN BANK</option>
+                                                                    <option value="STANDARD CHARTERED BANK" >STANDARD CHARTERED BANK</option>
+                                                                    <option value="STERLING BANK OF ASIA INC." >STERLING BANK OF ASIA INC.</option>
+                                                                    <option value="SUMITOMO MITSUI BANKING CORP" >SUMITOMO MITSUI BANKING CORP</option>
+                                                                    <option value="TAIWAN COOPERATIVE BANK MANILA OFFSHORE BANKING BRANCH" >TAIWAN COOPERATIVE BANK MANILA OFFSHORE BANKING BRANCH</option>
+                                                                    <option value="TONG YANG SAVINGS BANK INC." >TONG YANG SAVINGS BANK INC.</option>
+                                                                    <option value="UNION BANK OF THE PHILIPPINES" >UNION BANK OF THE PHILIPPINES</option>
+                                                                    <option value="UNITED COCONUT PLANTERS BANK" >UNITED COCONUT PLANTERS BANK</option>
+                                                                    <option value="UNITED OVERSEAS BANK PHILIPPINES" >UNITED OVERSEAS BANK PHILIPPINES</option>
+                                                                    <option value="WEALTH DEVELOPMENT BANK, CORP" >WEALTH DEVELOPMENT BANK, CORP</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="email" class="form-label">Branch Name</label>
+                                                                <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-6">
+                                                            <div class="form-group">
+                                                                <label for="lname" class="form-label">Bank Code</label>
+                                                                <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xl-12">
+                                                            <div class="d-flex justify-content-end">
+                                                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+					</div>
+				</section>
+			</main>
+		</div>
+	</div>
+
+	<!-- Global Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
