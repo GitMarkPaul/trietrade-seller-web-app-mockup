@@ -522,6 +522,9 @@ main {
   span, p {
     font-size: 12px;
   }
+  main {
+    padding: 0;
+  }
   .container-fluid {
     padding-left: 10px;
     padding-right: 10px;
