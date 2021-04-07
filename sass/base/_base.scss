@@ -12,15 +12,15 @@
 html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    height: 100vh;
 }
 
-body {
+html, body {
     font-family: var(--font-family-poppins);
     background: var(--body-default-bg);
     font-size: 0.9375rem;
-    line-height: 1.75;  
-    height: 100vh;
-    overflow-x: hidden;
+    line-height: 1.75; 
+    overflow-x: hidden; 
 }
 
 a {

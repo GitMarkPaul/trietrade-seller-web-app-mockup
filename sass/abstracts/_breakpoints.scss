@@ -1,12 +1,75 @@
+@media only screen and (max-width: 992px) {
+    // Sidebar
+    .sidebar {
+        position: fixed;
+        background: var(--color-white);
+        z-index: 99;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+
+        .sidebar-menu {
+            top: 0;
+
+            .sidebar-mb-pr {
+                display: block;
+                padding: 12px 14px 12px 14px;
+            }
+        }
+    }
+
+    #toggle-sidebar {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    // Sidebar
+    .sidebar {
+        position: fixed;
+        background: var(--color-white);
+        z-index: 99;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+
+        .sidebar-menu {
+            top: 0;
+
+            .sidebar-mb-pr {
+                display: block;
+                padding: 12px 14px 12px 14px;
+            }
+        }
+    }
+
+    // Chat
+    .chat-wrapper {
+        grid-template-columns: 35% 65%;
+
+        aside {
+            display: none;
+        }
+
+        .chat-messages {
+            padding: 24px 0 24px 0;
+        }
+    }
+}
+
 @media only screen and (max-width: 567px) {
     // Typography
     span, p {
         font-size: 12px;
     }
 
-    // Main
-    main {
-        padding: 0;
+    // Utilities
+    .btn-floating-bottom {
+        display: none;
     }
 
     // Container
@@ -21,7 +84,35 @@
 
     // Notification Wrapper
     .notification-wrapper-toggle {
-        width: 350px;
+        width: 300px;
+    }
+
+    .badge-container {
+        .notification-badge-number {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    // Navbar
+    .navbar {
+        .navbar-content {
+            .navbar-brand {
+                img {
+                    display: block;
+                }
+                
+                span {
+                    display: none;
+                }
+            }
+
+            .navbar-menu {
+                .navbar-items {
+                    display: none;
+                }
+            }
+        }
     }
 
     // Sidebar
@@ -29,14 +120,66 @@
         position: fixed;
         background: var(--color-white);
         z-index: 99;
-        width: 350px;
+        width: 300px;
         top: 0;
         bottom: 0;
         left: 0;
         display: none;
+
+        .sidebar-menu {
+            top: 0;
+
+            .sidebar-mb-pr {
+                display: block;
+                padding: 12px 14px 12px 14px;
+            }
+        }
     }
 
     #toggle-sidebar {
         display: block;
     }
+
+    // Mobile Tabs
+    .navbar-mb-tabs {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 14px;
+        background-color: var(--color-white);
+        box-shadow: var(--card-box-shadow);
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .navbar-mb-tab-items {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+    
+            span {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    // Chat
+    .chat-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        
+        .chat-aside {
+            display: none;
+        }
+
+        .chat-messages {
+            padding: 24px 12px 100px 12px;
+        }
+
+        .chat-convo {
+            display: none;
+        }
+    }
+    
 }

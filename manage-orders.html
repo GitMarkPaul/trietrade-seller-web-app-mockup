@@ -25,24 +25,87 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="sass/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 </head>
 <body>
+	<!-- Preloader -->
+	<div id="preloader"></div>
+	<!-- End Preloader -->
 	<header>
-		<nav class="navbar navbar-expand-lg">
-			<div class="container-fluid">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg">
 				<div class="navbar-content">
 					<div class="d-flex align-items-center">
-						<button type="button" class="btn btn-default me-1" id="toggle-sidebar"><ion-icon name="menu-sharp" class="fs-4"></ion-icon></button>
+						<button type="button" class="btn btn-default bg-light btn-circle" id="toggle-sidebar">
+							<ion-icon name="menu-sharp"></ion-icon>
+						</button>
 						<a class="navbar-brand" href="#">
-							<img src="img/trietrade-logo.png" alt="Trietrade Seller Center" width="150">
+							<span>Trietrade Seller Center</span>
 						</a>
 					</div>
+
+					<div class="d-flex align-items-center">
+						<a class="navbar-brand" href="#">
+							<img src="img/trietrade-logo.png" alt="Trietrade Seller Center" width="130">
+						</a>
+					</div>
+
+					<!-- Mobile Tabs -->
+					<ul class="navbar-mb-tabs">
+						<li class="navbar-mb-tab-items">
+							<a href="index.html" class="btn btn-default bg-light btn-circle">
+								<ion-icon name="storefront-outline"></ion-icon>
+							</a>
+						</li>
+						<li class="navbar-mb-tab-items">
+							<button class="btn btn-default bg-light btn-circle" type="button">
+								<ion-icon name="chatbox-ellipses-outline"></ion-icon>
+								<div class="badge-container">
+									<span class="notification-badge-number"></span>
+								</div>
+							</button>
+						</li>
+						<li class="navbar-mb-tab-items">
+							<a href="add-product.html" class="btn btn-default bg-primary btn-circle">
+								<ion-icon name="add-outline" class="text-white"></ion-icon>
+							</a>
+						</li>
+						<li class="navbar-mb-tab-items">
+							<button class="btn btn-default bg-light btn-circle" type="button">
+								<ion-icon name="notifications-outline"></ion-icon>
+								<div class="badge-container">
+									<span class="notification-badge-number"></span>
+								</div>
+							</button>
+						</li>
+						<li class="navbar-mb-tab-items">
+							<a href="manage-orders.html" class="btn btn-default bg-light btn-circle">
+								<ion-icon name="cart-outline"></ion-icon>
+								<div class="badge-container">
+									<span class="notification-badge-number"></span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!-- End Mobile Tabs -->
 	
-					<ul class="d-flex align-items-center">
-						<li>
-							<button class="btn btn-default" type="button" id="toggle-notif-sidebar">
-								<ion-icon name="notifications-outline" class="fs-4"></ion-icon>
-								<span class="notification-badge-number">3</span>
+					<ul class="navbar-menu">
+						<li class="navbar-items">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Search">
+								<ion-icon name="search"></ion-icon>
+							</button>
+						</li>
+						<li class="navbar-items">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Orders">
+								<ion-icon name="cart"></ion-icon>
+							</button>
+						</li>
+						<li class="navbar-items">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" id="toggle-notif-sidebar" data-tippy-content="Notification">
+								<ion-icon name="notifications"></ion-icon>
+								<div class="badge-container">
+									<span class="notification-badge-number">3</span>
+								</div>
 							</button>
 
 							<!-- Notification Wrapper -->
@@ -52,27 +115,17 @@
 								<ul class="notification-menu">
 									<li class="notification-items">
 										<a href="">
-											<div class="d-flex">
-												<div class="icon-bg-md bg-primary">
-													<ion-icon name="cart-sharp" class="text-white"></ion-icon>
-												</div>
-												<div class="ms-3">
-													<span class="fw-bold">Order - 490032921172827</span><br>
-													<small class="text-muited">10 minutes ago</small>
-												</div>
-											</div>
-										</a>
-									</li>
-
-									<li class="notification-items">
-										<a href="">
-											<div class="d-flex">
-												<div class="icon-bg-md bg-primary">
-													<ion-icon name="cart-sharp" class="text-white"></ion-icon>
-												</div>
-												<div class="ms-3">
-													<span>Order - 490032921172827</span><br>
-													<small class="text-muited">10 minutes ago</small>
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex">
+														<div class="icon-bg-md bg-primary">
+															<ion-icon name="cart-sharp" class="text-white"></ion-icon>
+														</div>
+														<div class="ms-3">
+															<span class="fw-bold">Order - 490032921172827</span><br>
+															<small class="text-primary fw-bold">10 minutes ago</small>
+														</div>
+													</div>
 												</div>
 											</div>
 										</a>
@@ -80,13 +133,17 @@
 
 									<li class="notification-items">
 										<a href="">
-											<div class="d-flex">
-												<div class="icon-bg-md bg-warning">
-													<ion-icon name="refresh-sharp" class="text-white"></ion-icon>
-												</div>
-												<div class="ms-3">
-													<span class="fw-bold">Return Order - 342031721141505</span><br>
-													<small class="text-muited">10 minutes ago</small>
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex">
+														<div class="icon-bg-md bg-primary">
+															<ion-icon name="cart-sharp" class="text-white"></ion-icon>
+														</div>
+														<div class="ms-3">
+															<span>Order - 490032921172827</span><br>
+															<small class="text-primary fw-bold">10 minutes ago</small>
+														</div>
+													</div>
 												</div>
 											</div>
 										</a>
@@ -94,13 +151,35 @@
 
 									<li class="notification-items">
 										<a href="">
-											<div class="d-flex">
-												<div class="icon-bg-md bg-danger">
-													<ion-icon name="hand-right-sharp" class="text-white"></ion-icon>
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex">
+														<div class="icon-bg-md bg-warning">
+															<ion-icon name="refresh-sharp" class="text-white"></ion-icon>
+														</div>
+														<div class="ms-3">
+															<span class="fw-bold">Return Order - 342031721141505</span><br>
+															<small class="text-primary fw-bold">10 minutes ago</small>
+														</div>
+													</div>
 												</div>
-												<div class="ms-3">
-													<span class="fw-bold">Cancelled Order - 342031721141505</span><br>
-													<small class="text-muited">10 minutes ago</small>
+											</div>
+										</a>
+									</li>
+
+									<li class="notification-items">
+										<a href="">
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex">
+														<div class="icon-bg-md bg-danger">
+															<ion-icon name="hand-right-sharp" class="text-white"></ion-icon>
+														</div>
+														<div class="ms-3">
+															<span class="fw-bold">Cancelled Order - 342031721141505</span><br>
+															<small class="text-muted">10 minutes ago</small>
+														</div>
+													</div>
 												</div>
 											</div>
 										</a>
@@ -111,12 +190,17 @@
 							<!-- End Notification Wrapper -->
 							<div id="bg-overlay"></div>
 						</li>
+						<li class="navbar-items">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Language">
+								<ion-icon name="language"></ion-icon>
+							</button>
+						</li>
 						<li>
 							<div class="btn-group">
-								<button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									<img src="img/user.jpg" alt="" class="rounded-circle" width="25" height="25">
+								<a href="#" class="tippy" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"  data-tippy-content="Account">
+									<img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
 									<span class="ms-2 authenticated-user">Juan Dela Cruz</span>
-								</button>
+								</a>
 								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1" style="width: 300px;">
 									<li>
 										<div class="d-flex align-items-center p-3">
@@ -127,7 +211,6 @@
 											</div>
 										</div>
 									</li>
-                                    <li><div class="dropdown-divider"></div></li>
 									<li>
 										<a class="dropdown-item" href="profile.html">
 											<div class="icon-bg-md bg-light">
@@ -165,19 +248,29 @@
 						</li>
 					</ul>
 				</div>
-			</div>
-		</nav>
+			</nav>
+		</div>
 	</header>
 
 	<div class="row g-4">
-		<div class="col-xl-2" id="sidebar-wrapper">
-			<aside class="sidebar">
+		<div class="col-xl-2 col-lg-3">
+			<div id="sidebar-overlay"></div>
+			<aside class="sidebar" id="sidebar-wrapper">
 				<div class="container-fluid">
 					<ul class="sidebar-menu">
+						<li class="sidebar-mb-pr">
+							<div class="d-flex align-items-center">
+								<img src="img/user.jpg" alt="" class="rounded-circle" width="60" height="60">
+								<div class="ms-3">
+									<span class="fs-5">Juan Dela Cruz</span>
+									<span>jdc@gmail.com</span>
+								</div>
+							</div>
+						</li>
 						<li class="sidebar-menu-items">
 							<a href="index.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="home-sharp"></ion-icon>
+									<ion-icon name="home-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Home</span>   
 							</a>
@@ -185,7 +278,7 @@
 						<li class="sidebar-menu-items">
 							<a href="manage-products.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="bag-handle-sharp"></ion-icon>
+									<ion-icon name="bag-handle-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Products</span>   
 							</a>
@@ -193,31 +286,32 @@
 						<li class="sidebar-menu-items active">
 							<a href="manage-orders.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="cart-sharp"></ion-icon>
+									<ion-icon name="cart-outline"></ion-icon>
 								</div>
-								<span class="ms-2">Orders</span>   
+								<span class="ms-2">Orders</span>
+								<span class="badge rounded-pill bg-danger badge-rigth">New!</span>   
 							</a>
 						</li>
 						<li class="sidebar-menu-items">
 							<a href="promotion.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="pricetags-sharp"></ion-icon>
+									<ion-icon name="pricetags-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Promotions</span>   
 							</a>
 						</li>
 						<li class="sidebar-menu-items">
-							<a href="" class="d-flex align-items-center">
+							<a href="trietrade-remittances.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="card-sharp"></ion-icon>
+									<ion-icon name="card-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Remittances</span>   
 							</a>
 						</li>
 						<li class="sidebar-menu-items">
-							<a href="" class="d-flex align-items-center">
+							<a href="live-selling.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="videocam-sharp"></ion-icon>
+									<ion-icon name="videocam-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Live Selling</span>   
 							</a>
@@ -225,15 +319,15 @@
 						<li class="sidebar-menu-items">
 							<a href="" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="help-circle-sharp"></ion-icon>
+									<ion-icon name="help-circle-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Contact Support</span>   
 							</a>
 						</li>
 						<li class="sidebar-menu-items">
-							<a href="" class="d-flex align-items-center">
+							<a href="settings.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
-									<ion-icon name="settings-sharp"></ion-icon>
+									<ion-icon name="settings-outline"></ion-icon>
 								</div>
 								<span class="ms-2">Settings</span>   
 							</a>
@@ -243,7 +337,7 @@
 			</aside>
 		</div>
 
-		<div class="col-xl-10">
+		<div class="col-xl-10 col-lg-9">
 			<main>
 				<section>
 					<div class="container-fluid">
@@ -262,19 +356,24 @@
                         <div class="row g-3">
                             <div class="col-xl-12">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="dropdown">
-                                        <button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ion-icon name="document-sharp" class="me-2"></ion-icon> Export
-                                        </button>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item" href="#">Export all orders</a></li>
-                                            <li><a class="dropdown-item" href="#">Export all unpaid orders</a></li>
-                                        </ul>
-                                    </div>
+									<div class="d-flex align-items-center">
+										<a class="btn btn-default" type="button">
+                                            <ion-icon name="gift" class="me-2"></ion-icon> Seller Deliveries
+                                        </a>
+										<div class="dropdown">
+											<button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+												<ion-icon name="document" class="me-2"></ion-icon> Export
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+												<li><a class="dropdown-item" href="#">Export all orders</a></li>
+												<li><a class="dropdown-item" href="#">Export all unpaid orders</a></li>
+											</ul>
+										</div>
+									</div>
     
                                     <div class="dropdown">
                                         <button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <ion-icon name="filter-sharp" class="me-2"></ion-icon> Filter Orders
+                                            <ion-icon name="filter" class="me-2"></ion-icon> Filter Orders
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                             <li><a class="dropdown-item" href="#">All</a></li>
@@ -298,7 +397,10 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <span class="fw-bold">Order No. 490032921172827</span>
+											<a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
                                             <div class="dropdown">
                                                 <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ion-icon name="ellipsis-vertical"></ion-icon>
@@ -307,7 +409,7 @@
                                                     <li><a class="dropdown-item" href="#">View Orders</a></li>
                                                     <li><a class="dropdown-item" href="#">Send Order Confirmation</a></li>
                                                     <li><a class="dropdown-item" href="#">Ready For Shipping</a></li>
-                                                    <li><a class="dropdown-item" href="#">Cancel Order</a></li>
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#cancelOrderModal">Cancel Order</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -335,7 +437,10 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <span class="fw-bold">Order No. 342031721141505</span>
+                                            <a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
                                             <div class="dropdown">
                                                 <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ion-icon name="ellipsis-vertical"></ion-icon>
@@ -372,7 +477,10 @@
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex justify-content-between align-items-center">
-                                            <span class="fw-bold">Order No. 863032321114347</span>
+                                            <a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
                                             <div class="dropdown">
                                                 <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <ion-icon name="ellipsis-vertical"></ion-icon>
@@ -408,7 +516,33 @@
 		</div>
 	</div>
 
+	
+	<!-- Modal -->
+	<div class="modal" id="cancelOrderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<form action="">
+					<div class="modal-body">
+						<span>Mark order <b>#490032921172827</b> as Cancelled?</span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Cancel Order</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
 	<!-- Global Scripts -->
     <script src="js/main.js"></script>
+
+	<!-- Tippy -->
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
     width: inherit;
     height: 100%;
     border-right: 1px solid #dad8d8;
+    @extend .slide-in-left;
 
     .sidebar-menu {
         position: absolute;
@@ -20,13 +21,23 @@
 
         .active {
             background-color: #cedff7;
+            border-right: 3px solid var(--color-primary);
+            border-bottom-left-radius: 23px;
+            border-top-left-radius: 23px;
+        }
+
+        .sidebar-mb-pr {
+            display: none;
         }
 
         .sidebar-menu-items {
             padding: 8px 14px;
 
             &:hover {
-                background-color: #dddddd;
+                background-color: var(--color-light-gray);
+                transition: ease-in-out 3ms;
+                border-bottom-left-radius: 23px;
+            border-top-left-radius: 23px;
             }
 
             a {
@@ -34,7 +45,6 @@
                 
                 ion-icon {
                     font-size: 20px;
-                    color: var(--color-gray);
                 }
             }
         }
@@ -49,19 +59,19 @@
     right: 0;
     height: 100%;
     width: 400px;
-    background-color: var(--color-white);
+    background-color: #f3f3f3;
     z-index: 999;
     padding: 20px;
     box-shadow: var(--card-box-shadow);
     display: none;
-    -webkit-animation: scale-in-hor-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: scale-in-hor-right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    overflow-x: hidden;
+    @extend .slide-in-right;
 
     .notification-menu {
         margin-top: 40px;
 
         .notification-items {
-            padding: 0 0 20px;
+            padding: 0 0 8px;
         }
     }
 
@@ -77,5 +87,9 @@
     height: 100%;
     background-color: var(--color-black);
     opacity: 0.7;
-    z-index: 9;
+    z-index: 99;
+}
+
+.sidebar-bg-overlay {
+    @extend .notif-bg-overlay;
 }

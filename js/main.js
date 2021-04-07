@@ -6,10 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const bgOverlay = document.getElementById('bg-overlay')
     const sidebarOverlay = document.getElementById('sidebar-overlay')
     const body = document.getElementsByTagName('body')[0]
-    const tooltip = document.querySelector('.tippy')
+    const tooltip = document.querySelectorAll('.tippy')
     const preloader = document.getElementById('preloader')
 
-    // Preloader
     preloader.addEventListener('load', (e) => {
         e.preventDefault();
 
@@ -19,26 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     // Main Sidebar
-    toggleSidebar.addEventListener('click', (e) => {
-        e.preventDefault();
-
+    toggleSidebar.addEventListener('click', () => {
         const x = document.getElementById('sidebar-wrapper')
 
-        if (x.style.display === "block") {
-            x.style.display = "none"
-            bgOverlay.classList.remove("notif-bg-overlay")
-            body.classList.remove("disable-body-scroll")
-        } else {
+        if (x.style.display === "none") {
             x.style.display = "block"
-            bgOverlay.classList.add("notif-bg-overlay")
+            sidebarOverlay.classList.add("sidebar-bg-overlay")
             body.classList.add("disable-body-scroll")
+        } else {
+            x.style.display = "none"
+            bgOverlay.classList.remove("sidebar-bg-overlay")
+            body.classList.remove("disable-body-scroll")
         }
     })
 
     // Notification Right Sidebar
-    toggleNotifSidebar.addEventListener('click', (e) => {
-        e.preventDefault();
-
+    toggleNotifSidebar.addEventListener('click', () => {
         const y = document.getElementById('toggle-notif-wrapper')
         
         if (y.style.display === "block") {
@@ -53,9 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     // To Remove the Overlay
-    bgOverlay.addEventListener('click', (e) => {
-        e.preventDefault();
-
+    bgOverlay.addEventListener('click', () => {
         const y = document.getElementById('toggle-notif-wrapper')
         
         if (y.style.display === "block") {
@@ -65,21 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             y.style.display = "block"
             bgOverlay.classList.add("notif-bg-overlay")
+            bgOverlay.classList.add("slide-out-right")
             body.classList.add("disable-body-scroll")
         }
     })
 
     // To Remove the Overlay
-    sidebarOverlay.addEventListener('click', (e) => {
-        e.preventDefault();
-
+    sidebarOverlay.addEventListener('click', () => {
         const b = document.getElementById('sidebar-wrapper')
         
         if (b.style.display === "block") {
             b.style.display = "none"
+            sidebarOverlay.classList.remove("sidebar-bg-overlay")
             body.classList.remove("disable-body-scroll")
         } else {
             b.style.display = "block"
+            sidebarOverlay.classList.add("sidebar-bg-overlay")
             body.classList.add("disable-body-scroll")
         }
     })
@@ -87,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialized Tooltip
     tippy(tooltip, {
         theme: 'gray',
+        animation: 'scale',
+        arrow: false
     });
 
 })

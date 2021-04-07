@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat - Trietrade Seller Center</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+	<!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" />
+
+    <!-- CSS -->
+	<link rel="stylesheet" href="sass/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
+    <style>
+        html, body {
+            position: fixed;
+            background: var(--color-white);
+        }
+        /* Let's get this party started */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgb(199, 199, 199); 
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: rgb(199, 199, 199); 
+            box-shadow: inset 0 0 6px rgb(199, 199, 199);
+        }
+        ::-webkit-scrollbar-thumb:window-inactive {
+            background: rgb(199, 199, 199);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="chat-wrapper">
+        <!-- Mobile Tabs -->
+        <ul class="navbar-mb-tabs">
+            <li class="navbar-mb-tab-items">
+                <a href="index.html" class="btn btn-default bg-light btn-circle">
+                    <ion-icon name="storefront-outline"></ion-icon>
+                </a>
+            </li>
+            <li class="navbar-mb-tab-items">
+                <a href="chat.html" class="btn btn-default bg-light btn-circle">
+                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    <div class="badge-container">
+                        <span class="notification-badge-number"></span>
+                    </div>
+                </a>
+            </li>
+            <li class="navbar-mb-tab-items">
+                <a href="add-product.html" class="btn btn-default bg-primary btn-circle">
+                    <ion-icon name="add-outline" class="text-white"></ion-icon>
+                </a>
+            </li>
+            <li class="navbar-mb-tab-items">
+                <button class="btn btn-default bg-light btn-circle" type="button">
+                    <ion-icon name="notifications-outline"></ion-icon>
+                    <div class="badge-container">
+                        <span class="notification-badge-number"></span>
+                    </div>
+                </button>
+            </li>
+            <li class="navbar-mb-tab-items">
+                <a href="manage-orders.html" class="btn btn-default bg-light btn-circle">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <div class="badge-container">
+                        <span class="notification-badge-number"></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!-- End Mobile Tabs -->
+        <aside>
+            <div class="container-fluid">
+                <div class="chat-aside">
+                    <ul class="chat-aside-menu">
+                        <li class="chat-aside-items">
+                            <a href="profile.html" class="btn btn-default bg-light btn-circle">
+                                <img src="img/favicon.png" alt="" class="rounded-circle" width="40" height="40">
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="profile.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Juan Dela Cruz" data-tippy-placement="right">
+                                <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="index.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Home" data-tippy-placement="right">
+                                <ion-icon name="storefront"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="manage-products.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Manage Products" data-tippy-placement="right">
+                                <ion-icon name="bag-handle"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="chat.html" class="btn btn-default bg-primary btn-circle tippy" data-tippy-content="Chat Messages" data-tippy-placement="right">
+                                <ion-icon name="chatbox" class="text-white"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="settings.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Account Settings" data-tippy-placement="right">
+                                <ion-icon name="settings"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items" style="position: fixed; bottom: 0;">
+                            <a href="index.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Logout" data-tippy-placement="right">
+                                <ion-icon name="power"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        
+        <div class="chat-messages">
+            <div class="container-fluid">
+                <div class="row row-cols-1 g-3">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Search conversations...">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link fw-bold active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link fw-bold text-muted" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Unread</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link fw-bold text-muted" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Read</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="chat-messages-content">
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">Shiela Mae Binculado</span>
+                                        <span class="chat-carbon-date-unread">Mon</span>
+                                    </div>
+                                    <span class="chat-message-details-unread">Hope you're all ready to tackle this great project. Let's smash some Brand Concept & Design!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">Carlo Guevarra</span>
+                                        <span class="chat-carbon-date-unread">Thur</span>
+                                    </div>
+                                    <span class="chat-message-details-unread">Roger that boss!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">El Angelo Ferrer</span>
+                                        <span class="chat-carbon-date-read">Tue</span>
+                                    </div>
+                                    <span class="chat-message-details-read">Well done all. See you all at 2 for the kick-off meeting.</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">Chloe Ibalio</span>
+                                        <span class="chat-carbon-date-read">Fri</span>
+                                    </div>
+                                    <span class="chat-message-details-read">I have already started gathering some stuff for the mood boards, excited to start!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">Laarni Bravo</span>
+                                        <span class="chat-carbon-date-read">Sun</span>
+                                    </div>
+                                    <span class="chat-message-details-read">Great start guys, I've added some notes to the task. We may need to make some adjustments to the last couple of items - but no biggie!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">John Michael Cao</span>
+                                        <span class="chat-carbon-date-read">Sat</span>
+                                    </div>
+                                    <span class="chat-message-details-read">Coming along nicely, we've got a draft for the client quarries completed.</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="chat-messages-items">
+                        <a href="">
+                            <div class="d-flex">
+                                <div class="icon-bg-md bg-light">
+                                    <img src="img/user.jpg" alt="" class="rounded-circle" width="45" height="45">
+                                </div>
+                                <div class="w-100 ms-3">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="chat-messenger">Mark Paul Caneda</span>
+                                        <span class="chat-carbon-date-read">Mon</span>
+                                    </div>
+                                    <span class="chat-message-details-read">Ok Thank you so much!</span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chat-convo">
+            <div class="container-fluid">
+                <div class="chat-convo-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="img/user.jpg" alt="" class="rounded-circle" width="50" height="50">
+                            <div class="ms-3">
+                                <h4 class="chat-convo-header-user">John Michael Cao</h4>
+                                <span class="chat-convo-header-availability">Active now</span>
+                            </div>
+                        </div>
+                        <a href="index.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Action" data-tippy-placement="right">
+                            <ion-icon name="ellipsis-vertical"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="chat-convo-body">
+
+                    <!-- Empty Message -->
+                    <!-- <div class="chat-empty-state">
+                        <ion-icon name="chatbox"></ion-icon>
+                        <span>Seems people are shy to start the chat. Break the ice send the first message.</span>
+                    </div> -->
+                    <!-- End Empty Message -->
+
+                    <!-- Timeline Tracker -->
+                    <div class="timeline">
+                        <span>Fri 1:30 PM</span>
+                    </div>
+                    <!-- End Timeline Tracker -->
+
+                    <!-- Start chat bubble for buyer -->
+                    <div class="chat-convo-buyer">
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                        <div class="chat-convo-buyer-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur rerum voluptas id mollitia quod nesciunt exercitationem nostrum dolor quasi quo quia explicabo rem voluptatum, perspiciatis cum ut! Autem, a.</p>
+                            <span>1 hour ago</span>
+                        </div>
+                    </div>
+                    <!-- End Start chat bubble for buyer -->
+
+                    <!-- Start chat images bubble for seller -->
+                    <div class="chat-convo-buyer">
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                        <div class="chat-convo-buyer-content">
+                            <div class="chat-convo-images">
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                            </div>
+                            <span>1 minute ago</span>
+                        </div>
+                    </div>
+                    <!-- End Start chat images bubble for seller -->
+
+                    <!-- Start chat bubble for seller -->
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <p>Officia tenetur rerum voluptas id mollitia quod nesciunt exercitationem nostrum dolor quasi quo quia explicabo rem voluptatum.</p>
+                            <span>1 minute ago</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+                    <!-- Start chat bubble for seller -->
+            
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <p>Exercitationem nostrum dolor quasi.</p>
+                            <span>1 minute ago</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+
+                    <div class="timeline">
+                        <span>Today</span>
+                    </div>
+
+                    <div class="chat-convo-buyer">
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                        <div class="chat-convo-buyer-content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia tenetur rerum voluptas id mollitia quod nesciunt exercitationem nostrum dolor quasi quo quia explicabo rem voluptatum, perspiciatis cum ut! Autem, a.</p>
+                            <span>1 hour ago</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <p>Officia tenetur rerum voluptas id mollitia quod nesciunt exercitationem nostrum dolor quasi quo quia explicabo rem voluptatum.</p>
+                            <span>1 minute ago</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+            
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <p>Exercitationem nostrum dolor quasi.</p>
+                            <span>1 minute ago</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+
+                    <!-- Start chat images bubble for seller -->
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <div class="chat-convo-images">
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                                <a href="img/default.jpg" data-fancybox="images">
+                                    <img src="img/default.jpg" alt="">
+                                </a>
+                            </div>
+                            <span>1 minute ago</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+                    <!-- End Start chat images bubble for seller -->
+
+                    <div class="chat-convo-seller">
+                        <div class="chat-convo-seller-content">
+                            <p>Got it sir?</p>
+                            <span>now</span>
+                        </div>
+                        <img src="img/user.jpg" alt="" class="rounded-circle" width="30" height="30">
+                    </div>
+                </div>
+
+                <div class="chat-convo-input">
+                    <form action="">
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-default tippy" data-tippy-content="Upload File" data-tippy-placement="top">
+                                <ion-icon name="images"></ion-icon>
+                            </button>
+
+                            <button type="button" class="btn btn-default tippy emoji-picker me-3 ms-3" data-tippy-content="Send Emoji" data-tippy-placement="top">
+                                <ion-icon name="happy"></ion-icon>
+                            </button>
+
+                            <div class="emoji-picker-content">
+                                <emoji-picker></emoji-picker>
+                            </div>
+
+                            <div class="chat-input-wrapper">
+                                <textarea name="" id="chat-input" cols="1" rows="1" class="form-control" placeholder="Compose a message..."></textarea>
+                            </div>
+
+                            <button type="button" class="btn btn-default btn-lg ms-3">
+                                <ion-icon name="send"></ion-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+	<!-- Global Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltip = document.querySelectorAll('.tippy')
+
+            // Initialized Tooltip
+            tippy(tooltip, {
+                theme: 'gray',
+                animation: 'scale',
+                arrow: false
+            });
+        })
+
+        // Emoji
+        const emojiPicker = document.querySelector('.emoji-picker-content')
+        const emojiPickerBtn = document.querySelector('.emoji-picker')
+        const chatInput = document.getElementById('chat-input')
+
+        chatInput.addEventListener('input', autoResize, false);
+
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
+
+        emojiPicker.style.display = 'none'
+
+        emojiPickerBtn.addEventListener('click', () => {
+            if (emojiPicker.style.display === "none") {
+                emojiPicker.style.display = "block"
+                emojiPicker.classList.add('emoji-content-behavior')
+            } else {
+                emojiPicker.style.display = "none"
+                emojiPicker.classList.remove('emoji-content-behavior')
+            }
+        })
+
+        // Emoji Picker Fire to Input
+        document.querySelector('emoji-picker').addEventListener('emoji-click', function(event){
+            const current = chatInput.value
+            chatInput.value = current+event.detail.unicode
+        });
+    </script>
+
+    <!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+	<!-- Ionic Modules -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+
+	<!-- Tippy -->
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+    <!-- Emoji -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+
+    <!-- Fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
+
+</body>
+</html>

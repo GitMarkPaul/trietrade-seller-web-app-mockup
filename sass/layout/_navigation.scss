@@ -3,13 +3,35 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-
+        
         .navbar-brand {
-            padding-top: 0;
-            padding-bottom: 0;
-            margin-right: 0;
+            img {
+                display: none;
+            }
+
+            span {
+                font-size: 24px;
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-right: 0;
+            }
+        }
+
+        .navbar-menu {
+            display: inline-flex;
+            align-items: center;
+
+            .navbar-items {
+                margin: 0 14px 0 0;
+            }
         }
     }
+}
+
+.nav-pills {
+    overflow-y: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {

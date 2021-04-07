@@ -1,0 +1,14 @@
+html .modal-open {
+    position: fixed;
+}
+
+.modal {
+    .modal-dialog {
+        @extend .scale-in-center;
+
+        .modal-content {
+            border: none;
+            border-radius: 6px;
+        }
+    }
+}

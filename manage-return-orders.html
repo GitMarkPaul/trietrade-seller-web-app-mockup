@@ -58,12 +58,12 @@
 							</a>
 						</li>
 						<li class="navbar-mb-tab-items">
-							<a href="chat.html" class="btn btn-default bg-light btn-circle">
+							<button class="btn btn-default bg-light btn-circle" type="button">
 								<ion-icon name="chatbox-ellipses-outline"></ion-icon>
 								<div class="badge-container">
 									<span class="notification-badge-number"></span>
 								</div>
-							</a>
+							</button>
 						</li>
 						<li class="navbar-mb-tab-items">
 							<a href="add-product.html" class="btn btn-default bg-primary btn-circle">
@@ -88,7 +88,7 @@
 						</li>
 					</ul>
 					<!-- End Mobile Tabs -->
-					
+	
 					<ul class="navbar-menu">
 						<li class="navbar-items">
 							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Search">
@@ -96,23 +96,15 @@
 							</button>
 						</li>
 						<li class="navbar-items">
-							<a href="chat.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Chat Messages">
-								<ion-icon name="chatbox"></ion-icon>
-								<div class="badge-container">
-									<span class="notification-badge-number">3</span>
-								</div>
-							</a>
-						</li>
-						<li class="navbar-items">
-							<a href="manage-orders.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Orders">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Orders">
 								<ion-icon name="cart"></ion-icon>
-							</a>
+							</button>
 						</li>
 						<li class="navbar-items">
 							<button class="btn btn-default bg-light btn-circle tippy" type="button" id="toggle-notif-sidebar" data-tippy-content="Notification">
 								<ion-icon name="notifications"></ion-icon>
 								<div class="badge-container">
-									<span class="notification-badge-number">+9</span>
+									<span class="notification-badge-number">3</span>
 								</div>
 							</button>
 
@@ -199,7 +191,7 @@
 							<div id="bg-overlay"></div>
 						</li>
 						<li class="navbar-items">
-							<button class="btn btn-default bg-light btn-circle tippy" data-bs-toggle="modal" data-bs-target="#languageSelector" type="button" data-tippy-content="Language">
+							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Language">
 								<ion-icon name="language"></ion-icon>
 							</button>
 						</li>
@@ -275,7 +267,7 @@
 								</div>
 							</div>
 						</li>
-						<li class="sidebar-menu-items active">
+						<li class="sidebar-menu-items">
 							<a href="index.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
 									<ion-icon name="home-outline"></ion-icon>
@@ -291,7 +283,7 @@
 								<span class="ms-2">Products</span>   
 							</a>
 						</li>
-						<li class="sidebar-menu-items">
+						<li class="sidebar-menu-items active">
 							<a href="manage-orders.html" class="d-flex align-items-center">
 								<div class="icon-bg bg-light">
 									<ion-icon name="cart-outline"></ion-icon>
@@ -350,168 +342,87 @@
 				<section>
 					<div class="container-fluid">
 						<!-- Breadcrumb -->
-						<div class="mb-4 d-flex align-items-center">
-							<img src="img/default.jpg" alt="" class="rounded-circle" width="45" height="45">
-							<h4 class="ms-3">Hi! Juan</h4>
+						<div class="mb-4">
+							<h4>Return Order Management</h4>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="manage-orders.html">Manage Orders</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Return Orders</li>
+                                </ol>
+                            </nav>
 						</div>
 						<!-- End Breadcrumb -->
+						
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center">
+											<a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
+                                            <div class="dropdown">
+                                                <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    <li><a class="dropdown-item" href="#">Review Order</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row row-cols-xl-3 row-cols-1 align-items-center g-3">
+                                            <div class="col">
+                                                <span class="card-text fst-italic d-flex  align-items-center">
+                                                    <ion-icon name="person-outline" class="me-1 fs-5"></ion-icon> Customer <b class="ms-1">Jane Doe Smith</b>
+                                                </span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="card-text fst-italic">Return Order Date <b>Wed, 17 March, 2021 14:43:09</b></span>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-primary w-100"><ion-icon name="book-sharp" class="me-2"></ion-icon> Review</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="card-text"><small class="text-muted">Order Date Wed, 17 March, 2021 14:15:05</small></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-						<div class="row g-3">
-							<div class="col-xl-4">
-								<a href="">
-									<div class="card">
-										<div class="card-body">
-											<div class="d-flex align-items-center">
-												<div class="icon-bg-lg bg-light">
-													<ion-icon name="location-outline"></ion-icon>
-												</div>
-												<div class="ms-2">
-													<h4 class="card-title">Manage Address Book</h4>
-													<span class="text-muted">Start to sell</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-xl-4">
-								<a href="">
-									<div class="card">
-										<div class="card-body">
-											<div class="d-flex align-items-center">
-												<div class="icon-bg-lg bg-light">
-													<ion-icon name="storefront-outline"></ion-icon>
-												</div>
-												<div class="ms-2">
-													<h4 class="card-title">Upload New Product</h4>
-													<span class="text-muted">Get your products ready</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-xl-4">
-								<a href="">
-									<div class="card">
-										<div class="card-body">
-											<div class="d-flex align-items-center">
-												<div class="icon-bg-lg bg-light">
-													<ion-icon name="card-outline"></ion-icon>
-												</div>
-												<div class="ms-2">
-													<h4 class="card-title">Verify ID & Bank</h4>
-													<span class="text-muted">Safeguard your account</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<div class="col-xl-12">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">Daily Task List</h4>
-
-										<div class="row row-cols-xl-4 row-cols-1 g-4 mt-3">
-											<div class="col">
-												<a href="">
-													<h5 class="card-title fw-bold">23</h5>
-													<div class="d-flex justify-content-between align-items-center">
-														<span class="me-2">Pending Orders</span>
-														<ion-icon name="chevron-forward-outline" class="fs-5"></ion-icon>
-													</div>
-												</a>
-											</div>
-											<div class="col">
-												<a href="">
-													<h5 class="card-title fw-bold">0</h5>
-													<div class="d-flex justify-content-between align-items-center">
-														<span class="me-2">Unpaid Orders</span>
-														<ion-icon name="chevron-forward-outline" class="fs-5"></ion-icon>
-													</div>
-												</a>
-											</div>
-											<div class="col">
-												<a href="">
-													<h5 class="card-title fw-bold">2</h5>
-													<div class="d-flex justify-content-between align-items-center">
-														<span class="me-2">Pending Return/Refund</span>
-														<ion-icon name="chevron-forward-outline" class="fs-5"></ion-icon>
-													</div>
-												</a>
-											</div>
-											<div class="col">
-												<a href="">
-													<h5 class="card-title fw-bold">13</h5>
-													<div class="d-flex justify-content-between align-items-center">
-														<span class="me-2">Orders For Delivery</span>
-														<ion-icon name="chevron-forward-outline" class="fs-5"></ion-icon>
-													</div>
-												</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-xl-6">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">Business Advisor</h4>
-										<canvas id="myChart"></canvas>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-xl-6">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">Sales Graph</h4>
-										<canvas id="myLineChart"></canvas>
-									</div>
-								</div>
-							</div>
-
-						</div>
 					</div>
 				</section>
 			</main>
 		</div>
 	</div>
 
-	<!-- Language Selector Modal -->
-	<div class="modal" id="languageSelector" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Language Settings
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="">
-                    <div class="modal-body">
-                        <div class="row row-cols-1 g-3">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="svw" class="form-label">Change Language</label>
-                                    <select name="" id="" class="form-select form-control" aria-placeholder="Select language">
-										<option value="">English (Eng)</option>
-										<option value="">Korean (KO)</option>
-									</select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
+	
+	<!-- Modal -->
+	<div class="modal" id="cancelOrderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<form action="">
+					<div class="modal-body">
+						<span>Mark order <b>#490032921172827</b> as Cancelled?</span>
+					</div>
+					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+						<button type="button" class="btn btn-primary">Cancel Order</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<!-- Global Scripts -->
     <script src="js/main.js"></script>
@@ -519,9 +430,5 @@
 	<!-- Tippy -->
 	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-
-	<!-- Chart -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
-	<script src="js/chart.js"></script>
 </body>
 </html>

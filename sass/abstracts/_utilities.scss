@@ -1,6 +1,7 @@
 // Body
 .disable-body-scroll {
     overflow-y: hidden;
+    position: relative;
 }
 
 #preloader {
@@ -69,20 +70,24 @@
 }
 
 // Badge
-.notification-badge-number {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--color-danger);
-    color: var(--color-white);
-    top: -6px;
-    right: 12px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-size: 12px;
+.badge-container {
+    position: absolute;
+    top: 10px;
+    margin-left: 23px;
+
+    .notification-badge-number {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--color-danger);
+        color: var(--color-white);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 11px;
+    }
 }
 
 // Alignment
@@ -96,6 +101,5 @@
     background-color: var(--color-gray);
     color: var(--color-white);
     padding: 4px;
-    -webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
+}
+
