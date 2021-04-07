@@ -41,11 +41,6 @@
 						</button>
 						<a class="navbar-brand" href="#">
 							<span>Trietrade Seller Center</span>
-						</a>
-					</div>
-
-					<div class="d-flex align-items-center">
-						<a class="navbar-brand" href="#">
 							<img src="img/trietrade-logo.png" alt="Trietrade Seller Center" width="130">
 						</a>
 					</div>
@@ -58,25 +53,17 @@
 							</a>
 						</li>
 						<li class="navbar-mb-tab-items">
-							<button class="btn btn-default bg-light btn-circle" type="button">
-								<ion-icon name="chatbox-ellipses-outline"></ion-icon>
+							<a href="chat.html" class="btn btn-default bg-light btn-circle">
+								<ion-icon name="chatbox-outline"></ion-icon>
 								<div class="badge-container">
 									<span class="notification-badge-number"></span>
 								</div>
-							</button>
+							</a>
 						</li>
 						<li class="navbar-mb-tab-items">
 							<a href="add-product.html" class="btn btn-default bg-primary btn-circle">
 								<ion-icon name="add-outline" class="text-white"></ion-icon>
 							</a>
-						</li>
-						<li class="navbar-mb-tab-items">
-							<button class="btn btn-default bg-light btn-circle" type="button">
-								<ion-icon name="notifications-outline"></ion-icon>
-								<div class="badge-container">
-									<span class="notification-badge-number"></span>
-								</div>
-							</button>
 						</li>
 						<li class="navbar-mb-tab-items">
 							<a href="manage-orders.html" class="btn btn-default bg-light btn-circle">
@@ -86,9 +73,14 @@
 								</div>
 							</a>
 						</li>
+						<li class="navbar-mb-tab-items">
+							<a href="promotion.html" class="btn btn-default bg-light btn-circle" type="button">
+								<ion-icon name="pricetags-outline"></ion-icon>
+							</a>
+						</li>
 					</ul>
 					<!-- End Mobile Tabs -->
-	
+					
 					<ul class="navbar-menu">
 						<li class="navbar-items">
 							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Search">
@@ -96,15 +88,23 @@
 							</button>
 						</li>
 						<li class="navbar-items">
-							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Orders">
-								<ion-icon name="cart"></ion-icon>
-							</button>
+							<a href="chat.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Chat Messages">
+								<ion-icon name="chatbox"></ion-icon>
+								<div class="badge-container">
+									<span class="notification-badge-number"></span>
+								</div>
+							</a>
 						</li>
 						<li class="navbar-items">
+							<a href="manage-orders.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Orders">
+								<ion-icon name="cart"></ion-icon>
+							</a>
+						</li>
+						<li class="me-3">
 							<button class="btn btn-default bg-light btn-circle tippy" type="button" id="toggle-notif-sidebar" data-tippy-content="Notification">
 								<ion-icon name="notifications"></ion-icon>
 								<div class="badge-container">
-									<span class="notification-badge-number">3</span>
+									<span class="notification-badge-number"></span>
 								</div>
 							</button>
 
@@ -118,11 +118,11 @@
 											<div class="card">
 												<div class="card-body">
 													<div class="d-flex">
-														<div class="icon-bg-md bg-primary">
+														<div class="icon-bg bg-primary">
 															<ion-icon name="cart-sharp" class="text-white"></ion-icon>
 														</div>
 														<div class="ms-3">
-															<span class="fw-bold">Order - 490032921172827</span><br>
+															<span class="fw-bold">You have new order!</span><br>
 															<small class="text-primary fw-bold">10 minutes ago</small>
 														</div>
 													</div>
@@ -136,12 +136,12 @@
 											<div class="card">
 												<div class="card-body">
 													<div class="d-flex">
-														<div class="icon-bg-md bg-primary">
+														<div class="icon-bg bg-primary">
 															<ion-icon name="cart-sharp" class="text-white"></ion-icon>
 														</div>
 														<div class="ms-3">
-															<span>Order - 490032921172827</span><br>
-															<small class="text-primary fw-bold">10 minutes ago</small>
+															<span>Order</span><br>
+															<small class="text-muted">10 minutes ago</small>
 														</div>
 													</div>
 												</div>
@@ -154,12 +154,12 @@
 											<div class="card">
 												<div class="card-body">
 													<div class="d-flex">
-														<div class="icon-bg-md bg-warning">
+														<div class="icon-bg bg-warning">
 															<ion-icon name="refresh-sharp" class="text-white"></ion-icon>
 														</div>
 														<div class="ms-3">
-															<span class="fw-bold">Return Order - 342031721141505</span><br>
-															<small class="text-primary fw-bold">10 minutes ago</small>
+															<span>Return Order</span><br>
+															<small class="text-muted">10 minutes ago</small>
 														</div>
 													</div>
 												</div>
@@ -172,11 +172,11 @@
 											<div class="card">
 												<div class="card-body">
 													<div class="d-flex">
-														<div class="icon-bg-md bg-danger">
+														<div class="icon-bg bg-danger">
 															<ion-icon name="hand-right-sharp" class="text-white"></ion-icon>
 														</div>
 														<div class="ms-3">
-															<span class="fw-bold">Cancelled Order - 342031721141505</span><br>
+															<span>Cancelled Order</span><br>
 															<small class="text-muted">10 minutes ago</small>
 														</div>
 													</div>
@@ -191,7 +191,7 @@
 							<div id="bg-overlay"></div>
 						</li>
 						<li class="navbar-items">
-							<button class="btn btn-default bg-light btn-circle tippy" type="button" data-tippy-content="Language">
+							<button class="btn btn-default bg-light btn-circle tippy" data-bs-toggle="modal" data-bs-target="#languageSelector" type="button" data-tippy-content="Language">
 								<ion-icon name="language"></ion-icon>
 							</button>
 						</li>

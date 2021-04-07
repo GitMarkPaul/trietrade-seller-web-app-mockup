@@ -176,14 +176,39 @@ h6 {
 
 .badge-container {
   position: absolute;
-  top: 10px;
-  margin-left: 23px;
+  top: 18px;
+  margin-left: 16px;
 }
 
 .badge-container .notification-badge-number {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: var(--color-white);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.chat-badge-container {
+  margin-left: -10px;
+  margin-top: -30px;
+}
+
+.chat-badge-container .chat-notification-dot {
+  position: relative;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--color-danger);
   color: var(--color-white);
@@ -432,6 +457,7 @@ main {
   width: inherit;
   height: 100%;
   border-right: 1px solid #dad8d8;
+  overflow-y: auto;
 }
 
 .sidebar .sidebar-menu {
@@ -959,10 +985,6 @@ html .modal-open {
   }
   .notification-wrapper-toggle {
     width: 300px;
-  }
-  .badge-container .notification-badge-number {
-    width: 10px;
-    height: 10px;
   }
   .navbar .navbar-content .navbar-brand img {
     display: block;

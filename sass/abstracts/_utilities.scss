@@ -72,13 +72,32 @@
 // Badge
 .badge-container {
     position: absolute;
-    top: 10px;
-    margin-left: 23px;
+    top: 18px;
+    margin-left: 16px;
 
     .notification-badge-number {
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--color-danger);
+        color: var(--color-white);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 11px;
+    }
+}
+
+.chat-badge-container {
+    margin-left: -10px;
+    margin-top: -30px;
+
+    .chat-notification-dot {
+        position: relative;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: var(--color-danger);
         color: var(--color-white);

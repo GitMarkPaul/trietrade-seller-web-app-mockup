@@ -357,91 +357,122 @@
                             <div class="col-xl-12">
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Profile</button>
+                                        <a href="profile.html" class="nav-link" id="pills-home-tab" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Profile</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <a href="store-information.html" class="nav-link" id="pills-profile-tab" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Store Information</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a href="bank-information.html" class="nav-link" id="pills-contact-tab" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Bank Information</a>
+                                        <button class="nav-link active" id="pills-contact-tab" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Bank Information</button>
                                     </li>
                                 </ul>
-
-								<div class="card">
-									<div class="card-body">
-										<form action="">
-											<div class="row g-3">
-												<div class="col-xl-12">
-													<div class="d-flex align-items-center">
-														<img src="img/user.jpg" alt="Username" class="rounded-circle" width="130" height="130">
-														<div class="ms-3">
-															<h4>Juan Dela Cruz</h4>
-															<p class="text-muted">jdc@gmail.com</p>
-															<button type="button" class="btn btn-primary d-flex align-items-center"><ion-icon name="camera-sharp" class="me-2"></ion-icon> Change Profile Picture</button>
-														</div>
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="fname" class="form-label">First Name</label>
-														<input type="text" class="form-control" placeholder="Juan">
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="mname" class="form-label">Middle Name</label>
-														<input type="text" class="form-control" placeholder="Dela">
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="lname" class="form-label">Last Name</label>
-														<input type="text" class="form-control" placeholder="Cruz">
-													</div>
-												</div>
-												<div class="col-xl-6">
-													<div class="form-group">
-														<label for="email" class="form-label">Email</label>
-														<input type="email" class="form-control" placeholder="jdc@gmail.com">
-													</div>
-												</div>
-												<div class="col-xl-6">
-													<div class="form-group">
-														<label for="email" class="form-label">YouTube Channel Email </label>
-														<input type="email" class="form-control" placeholder="jdc.youtube@gmail.com">
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="phone" class="form-label">Phone Number</label>
-														<input type="tel" class="form-control" placeholder="Juan">
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="birthdate" class="form-label">Birthdate</label>
-														<input type="date" class="form-control" placeholder="Dela">
-													</div>
-												</div>
-												<div class="col-xl-4">
-													<div class="form-group">
-														<label for="lname" class="form-label">Gender</label>
-														<select name="" class="form-select form-control">
-															<option selected disable>-- select --</option>
-															<option value="Male">Male</option>
-															<option value="Female">Female</option>
-														</select>
-													</div>
-												</div>
-												<div class="col-xl-12">
-													<div class="d-flex justify-content-end">
-														<button type="submit" class="btn btn-primary">Save Changes</button>
-													</div>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div> 
+    
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form action="">
+                                            <div class="row g-3">
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <label for="fname" class="form-label">Account Name</label>
+                                                        <input type="text" class="form-control" placeholder="Juan">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <label for="phone" class="form-label">Account Number</label>
+                                                        <input type="number" class="form-control" placeholder="Juan">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <div class="form-group">
+                                                        <label for="lname" class="form-label">Bank Name</label>
+                                                        <select name="" class="form-select form-control">
+                                                            <option selected disable>-- select --</option>
+                                                            <option value="AL-AMANAH ISLAMIC INVESTMENT BANK" >AL-AMANAH ISLAMIC INVESTMENT BANK</option>
+                                                            <option value="ASIA UNITED BANK CORPORATION" >ASIA UNITED BANK CORPORATION</option>
+                                                            <option value="ASIAN DEVELOPMENT BANK" >ASIAN DEVELOPMENT BANK</option>
+                                                            <option value="AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED" >AUSTRALIA AND NEW ZEALAND BANKING GROUP LIMITED</option>
+                                                            <option value="BANGKOK BANK PUBLIC COMPANY LIMITED MANILA BRANCH" >BANGKOK BANK PUBLIC COMPANY LIMITED MANILA BRANCH</option>
+                                                            <option value="BANK OF AMERICA N.A. MANILA" >BANK OF AMERICA N.A. MANILA</option>
+                                                            <option value="BANK OF CHINA" >BANK OF CHINA</option>
+                                                            <option value="BANK OF COMMERCE" >BANK OF COMMERCE</option>
+                                                            <option value="BANK OF THE PHILIPPINE ISLANDS" >BANK OF THE PHILIPPINE ISLANDS</option>
+                                                            <option value="BANK OF TOKYO MITSUBISHI UFJ LTD. THE" >BANK OF TOKYO MITSUBISHI UFJ LTD. THE</option>
+                                                            <option value="BDO UNIBANK INC." >BDO UNIBANK INC.</option>
+                                                            <option value="BNP PARIBAS MANILA OFFSHORE BRANCH" >BNP PARIBAS MANILA OFFSHORE BRANCH</option>
+                                                            <option value="BPI FAMILY SAVINGS BANK" >BPI FAMILY SAVINGS BANK</option>
+                                                            <option value="CHINA BANK SAVINGS, INC." >CHINA BANK SAVINGS, INC.</option>
+                                                            <option value="CHINA BANKING CORPORATION" >CHINA BANKING CORPORATION</option>
+                                                            <option value="CHINATRUST (PHILS.) COMMERCIAL BANK MANILA" >CHINATRUST (PHILS.) COMMERCIAL BANK MANILA</option>
+                                                            <option value="CIMB BANK PHILS., INC." >CIMB BANK PHILS., INC.</option>
+                                                            <option value="CITIBANK N.A. MANILA BRANCH" >CITIBANK N.A. MANILA BRANCH</option>
+                                                            <option value="CITIBANK SAVINGS INC." >CITIBANK SAVINGS INC.</option>
+                                                            <option value="CTBC BANK PHILIPPINES CORP." >CTBC BANK PHILIPPINES CORP.</option>
+                                                            <option value="DCPAY PHILIPPINES (COINS.PH)" >DCPAY PHILIPPINES (COINS.PH)</option>
+                                                            <option value="DEUTSCHE BANK AG" >DEUTSCHE BANK AG</option>
+                                                            <option value="DEVELOPMENT BANK OF THE PHILIPPINES" >DEVELOPMENT BANK OF THE PHILIPPINES</option>
+                                                            <option value="DUNGGANON BANK, INC." >DUNGGANON BANK, INC.</option>
+                                                            <option value="EAST WEST BANKING CORPORATION" >EAST WEST BANKING CORPORATION</option>
+                                                            <option value="EQUICOM SAVINGS BANK" >EQUICOM SAVINGS BANK</option>
+                                                            <option value="FIRST CONSOLIDATED BANK" >FIRST CONSOLIDATED BANK</option>
+                                                            <option value="HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED THE" >HONGKONG AND SHANGHAI BANKING CORPORATION LIMITED THE</option>
+                                                            <option value="HSBC SAVINGS BANK (PHILIPINES) INC." >HSBC SAVINGS BANK (PHILIPINES) INC.</option>
+                                                            <option value="INDUSTRIAL BANK OF KOREA - MANILA" >INDUSTRIAL BANK OF KOREA - MANILA</option>
+                                                            <option value="ING BANK N.V." >ING BANK N.V.</option>
+                                                            <option value="JPMORGAN CHASE BANK N.A. MANILA BRANCH" >JPMORGAN CHASE BANK N.A. MANILA BRANCH</option>
+                                                            <option value="KEB HANA BANK" >KEB HANA BANK</option>
+                                                            <option value="KOREA EXCHANGE BANK" >KOREA EXCHANGE BANK</option>
+                                                            <option value="LAND BANK OF THE PHILIPPINES" >LAND BANK OF THE PHILIPPINES</option>
+                                                            <option value="MAYBANK PHILIPPINES INC" >MAYBANK PHILIPPINES INC</option>
+                                                            <option value="MEGA INTERNATIONAL COMMERCIAL BANK CO. LTD. MANILA BRANCH" >MEGA INTERNATIONAL COMMERCIAL BANK CO. LTD. MANILA BRANCH</option>
+                                                            <option value="METROPOLITAN BANK AND TRUST CO." >METROPOLITAN BANK AND TRUST CO.</option>
+                                                            <option value="MIZUHO BANK LTD. MANILA BRANCH" >MIZUHO BANK LTD. MANILA BRANCH</option>
+                                                            <option value="MUFG BANK, LTD" >MUFG BANK, LTD</option>
+                                                            <option value="NESTLE BUSINESS SERVICES AOA INC" >NESTLE BUSINESS SERVICES AOA INC</option>
+                                                            <option value="PHILIPPINE BANK OF COMMUNICATIONS" >PHILIPPINE BANK OF COMMUNICATIONS</option>
+                                                            <option value="PHILIPPINE BUSINESS BANK, INC." >PHILIPPINE BUSINESS BANK, INC.</option>
+                                                            <option value="PHILIPPINE NATIONAL BANK" >PHILIPPINE NATIONAL BANK</option>
+                                                            <option value="PHILIPPINE SAVINGS BANK" >PHILIPPINE SAVINGS BANK</option>
+                                                            <option value="PHILIPPINE VETERANS BANK" >PHILIPPINE VETERANS BANK</option>
+                                                            <option value="PHILTRUST BANK (PHILIPPINE TRUST COMPANY)" >PHILTRUST BANK (PHILIPPINE TRUST COMPANY)</option>
+                                                            <option value="PRODUCERS SAVINGS BANK CORPORATION" >PRODUCERS SAVINGS BANK CORPORATION</option>
+                                                            <option value="RIZAL COMMERCIAL BANKING CORP." >RIZAL COMMERCIAL BANKING CORP.</option>
+                                                            <option value="ROBINSONS BANK CORPORATION" >ROBINSONS BANK CORPORATION</option>
+                                                            <option value="SECURITY BANK CORPORATION" >SECURITY BANK CORPORATION</option>
+                                                            <option value="SHINHAN BANK" >SHINHAN BANK</option>
+                                                            <option value="STANDARD CHARTERED BANK" >STANDARD CHARTERED BANK</option>
+                                                            <option value="STERLING BANK OF ASIA INC." >STERLING BANK OF ASIA INC.</option>
+                                                            <option value="SUMITOMO MITSUI BANKING CORP" >SUMITOMO MITSUI BANKING CORP</option>
+                                                            <option value="TAIWAN COOPERATIVE BANK MANILA OFFSHORE BANKING BRANCH" >TAIWAN COOPERATIVE BANK MANILA OFFSHORE BANKING BRANCH</option>
+                                                            <option value="TONG YANG SAVINGS BANK INC." >TONG YANG SAVINGS BANK INC.</option>
+                                                            <option value="UNION BANK OF THE PHILIPPINES" >UNION BANK OF THE PHILIPPINES</option>
+                                                            <option value="UNITED COCONUT PLANTERS BANK" >UNITED COCONUT PLANTERS BANK</option>
+                                                            <option value="UNITED OVERSEAS BANK PHILIPPINES" >UNITED OVERSEAS BANK PHILIPPINES</option>
+                                                            <option value="WEALTH DEVELOPMENT BANK, CORP" >WEALTH DEVELOPMENT BANK, CORP</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="email" class="form-label">Branch Name</label>
+                                                        <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group">
+                                                        <label for="lname" class="form-label">Bank Code</label>
+                                                        <input type="email" class="form-control" placeholder="jdc@gmail.com">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <div class="d-flex justify-content-end">
+                                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
