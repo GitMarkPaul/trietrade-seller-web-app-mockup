@@ -107,8 +107,8 @@ h6 {
 }
 
 .icon-bg {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -119,6 +119,10 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.icon-bg ion-icon {
+  font-size: 24px;
 }
 
 .icon-bg-md {
@@ -137,7 +141,7 @@ h6 {
 }
 
 .icon-bg-md ion-icon {
-  font-size: 23px;
+  font-size: 24px;
 }
 
 .icon-bg-lg {
@@ -156,7 +160,12 @@ h6 {
 }
 
 .icon-bg-lg ion-icon {
-  font-size: 35px;
+  font-size: 32px;
+}
+
+.icon-bg-lg .flag-icon {
+  width: 64% !important;
+  height: 100%;
 }
 
 .sticky-top {
@@ -234,6 +243,31 @@ h6 {
   background-color: var(--color-gray);
   color: var(--color-white);
   padding: 4px;
+}
+
+.check-indicator-tr {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.check-indicator-tr ion-icon {
+  font-size: 24px;
+  color: var(--color-success);
+}
+
+.img-btn-uploader input.file {
+  position: absolute;
+  opacity: 0;
+  -moz-opacity: 0;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+#upload-picture-to-crop {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 25px;
 }
 
 .btn {
@@ -333,6 +367,16 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.dropdown-menu .dropdown-item .icon-bg ion-icon {
+  font-size: 24px;
+  margin-right: 0;
+}
+
+.dropdown-menu .dropdown-item ion-icon {
+  font-size: 16px;
+  margin-right: 14px;
 }
 
 .dropdown-menu .dropdown-item span {
@@ -595,8 +639,8 @@ main {
   border: none;
 }
 
-html .modal-open {
-  position: fixed;
+.modal-open {
+  padding-right: 0 !important;
 }
 
 .modal .modal-dialog .modal-content {
@@ -739,7 +783,8 @@ html .modal-open {
 .chat-wrapper .chat-convo .chat-convo-body {
   display: -ms-grid;
   display: grid;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 87vmin;
   width: 63%;
   padding: 100px 24px 100px 24px;
@@ -914,6 +959,12 @@ html .modal-open {
 
 .chat-wrapper .chat-convo .chat-convo-input .chat-input-wrapper textarea {
   resize: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .chat-wrapper .chat-convo .chat-convo-body {
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1400,5 +1451,31 @@ html .modal-open {
     transform: translateX(-1000px);
     opacity: 0;
   }
+}
+
+.tippy-box[data-animation=scale][data-placement^=top] {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.tippy-box[data-animation=scale][data-placement^=bottom] {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.tippy-box[data-animation=scale][data-placement^=left] {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.tippy-box[data-animation=scale][data-placement^=right] {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.tippy-box[data-animation=scale][data-state=hidden] {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

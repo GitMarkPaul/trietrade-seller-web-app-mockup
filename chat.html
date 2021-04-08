@@ -65,7 +65,7 @@
             </li>
             <li class="navbar-mb-tab-items">
                 <a href="chat.html" class="btn btn-default bg-light btn-circle">
-                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                    <ion-icon name="chatbox-outline"></ion-icon>
                     <div class="badge-container">
                         <span class="notification-badge-number"></span>
                     </div>
@@ -77,19 +77,16 @@
                 </a>
             </li>
             <li class="navbar-mb-tab-items">
-                <button class="btn btn-default bg-light btn-circle" type="button">
-                    <ion-icon name="notifications-outline"></ion-icon>
-                    <div class="badge-container">
-                        <span class="notification-badge-number"></span>
-                    </div>
-                </button>
-            </li>
-            <li class="navbar-mb-tab-items">
                 <a href="manage-orders.html" class="btn btn-default bg-light btn-circle">
                     <ion-icon name="cart-outline"></ion-icon>
                     <div class="badge-container">
                         <span class="notification-badge-number"></span>
                     </div>
+                </a>
+            </li>
+            <li class="navbar-mb-tab-items">
+                <a href="promotion.html" class="btn btn-default bg-light btn-circle" type="button">
+                    <ion-icon name="pricetags-outline"></ion-icon>
                 </a>
             </li>
         </ul>
@@ -119,6 +116,16 @@
                             </a>
                         </li>
                         <li class="chat-aside-items">
+                            <a href="promotion.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Create Vouchers" data-tippy-placement="right">
+                                <ion-icon name="pricetags"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="trietrade-remittances.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Trietrade Remittances" data-tippy-placement="right">
+                                <ion-icon name="card"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
                             <a href="chat.html" class="btn btn-default bg-primary btn-circle tippy" data-tippy-content="Chat Messages" data-tippy-placement="right">
                                 <ion-icon name="chatbox" class="text-white"></ion-icon>
                             </a>
@@ -126,6 +133,11 @@
                         <li class="chat-aside-items">
                             <a href="settings.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Account Settings" data-tippy-placement="right">
                                 <ion-icon name="settings"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="chat-aside-items">
+                            <a href="settings.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Contact Support" data-tippy-placement="right">
+                                <ion-icon name="help-circle"></ion-icon>
                             </a>
                         </li>
                         <li class="chat-aside-items" style="position: fixed; bottom: 0;">
@@ -294,9 +306,15 @@
                                 <span class="chat-convo-header-availability">Active now</span>
                             </div>
                         </div>
-                        <a href="index.html" class="btn btn-default bg-light btn-circle tippy" data-tippy-content="Action" data-tippy-placement="right">
-                            <ion-icon name="ellipsis-vertical"></ion-icon>
-                        </a>
+                        <div class="dropdown">
+                            <button class="btn btn-default bg-light btn-circle tippy" type="button" id="dropdownMenuButton1" data-tippy-content="Action" data-tippy-placement="right" data-tippy-content="Action" data-tippy-placement="right" data-bs-toggle="dropdown" aria-expanded="false">
+                                <ion-icon name="ellipsis-vertical"></ion-icon>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#"><ion-icon name="trash"></ion-icon> Delete Conversation</a></li>
+                                <li><a class="dropdown-item" href="#"><ion-icon name="alert-circle"></ion-icon> Report Abuse</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -499,6 +517,8 @@
                 const current = chatInput.value
                 chatInput.value = current+event.detail.unicode
             });
+
+            window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
         })
 
     </script>

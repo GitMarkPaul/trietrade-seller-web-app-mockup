@@ -121,7 +121,8 @@
 
         .chat-convo-body {
             display: grid;
-            overflow: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
             height: 87vmin;
             width: 63%;
             padding: 100px 24px 100px 24px;

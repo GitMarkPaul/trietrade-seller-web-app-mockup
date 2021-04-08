@@ -1,3 +1,14 @@
+@media only screen and (max-width: 1200px) {
+    // Chat
+    .chat-wrapper {
+        .chat-convo {
+            .chat-convo-body {
+                height: 100vh;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 992px) {
     // Sidebar
     .sidebar {

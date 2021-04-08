@@ -16,16 +16,8 @@
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-	<!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-	<!-- Ionic Modules -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-
 	<!-- CSS -->
 	<link rel="stylesheet" href="sass/main.css">
-	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 </head>
 <body>
 	<!-- Preloader -->
@@ -363,15 +355,6 @@
 												<ion-icon name="cube" class="fs-5"></ion-icon>
 												<span class="fw-bold ms-2">Order No. 490032921172827</span>
 											</a>
-                                            <div class="dropdown">
-                                                <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ion-icon name="ellipsis-vertical"></ion-icon>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                    <li><a class="dropdown-item" href="#">Review Order</a></li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -385,7 +368,7 @@
                                                 <span class="card-text fst-italic">Return Order Date <b>Wed, 17 March, 2021 14:43:09</b></span>
                                             </div>
                                             <div class="col">
-                                                <button type="button" class="btn btn-primary w-100"><ion-icon name="book-sharp" class="me-2"></ion-icon> Review</button>
+                                                <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#returnOrderDetailsModal"><ion-icon name="book-sharp" class="me-2"></ion-icon> Review</button>
                                             </div>
                                         </div>
                                     </div>
@@ -402,30 +385,52 @@
 		</div>
 	</div>
 
-	
-	<!-- Modal -->
-	<div class="modal" id="cancelOrderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<!-- Start Order Information -->
+	<div class="modal" id="returnOrderDetailsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">Confirmation</h5>
+					<h5 class="modal-title" id="staticBackdropLabel">Return Order Details</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<form action="">
-					<div class="modal-body">
-						<span>Mark order <b>#490032921172827</b> as Cancelled?</span>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Cancel Order</button>
-					</div>
-				</form>
+				<div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item">Order <b>#342031721141505</b></li>
+						<li class="list-group-item list-group-item-light">BAVIN P11 In-Ear Earphone 3.5mm Audio Jack Wired Headset Anti Fall Design Noise Reduction Stereo Earbuds Earphones</li>
+						<li class="list-group-item list-group-item-light">Reason: <b>Damaged Item/Faulty Item</b></li>
+						<li class="list-group-item list-group-item-light">Size: <b>350 ml</b></li>
+						<li class="list-group-item list-group-item-light">Status: <b>Refunded</b></li>
+						<li class="list-group-item list-group-item-light">Additional Information:</li>
+						<li class="list-group-item list-group-item-light">
+							Image(s) Uploaded:
+							<div class="row row-cols-2 g-3 mt-2">
+								<div class="col">
+									<img src="img/default.jpg" alt="" width="100%">
+								</div>
+								<div class="col">
+									<img src="img/default.jpg" alt="" width="100%">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- End Order Information -->
 
 	<!-- Global Scripts -->
     <script src="js/main.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+	<!-- Ionic Modules -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 
 	<!-- Tippy -->
 	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>

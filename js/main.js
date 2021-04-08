@@ -84,5 +84,5 @@ document.addEventListener('DOMContentLoaded', function() {
         animation: 'scale',
         arrow: false
     });
-
 })
+

@@ -16,16 +16,8 @@
 	<!-- Bootstrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-	<!-- Scripts -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-	<!-- Ionic Modules -->
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
-
 	<!-- CSS -->
 	<link rel="stylesheet" href="sass/main.css">
-	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 </head>
 <body>
 	<!-- Preloader -->
@@ -352,25 +344,73 @@
                             </nav>
 						</div>
 						<!-- End Breadcrumb -->
+
+						<div class="row row-cols-xl-3 row-cols-1 g-2 g-xl-3 mb-3">
+							<div class="col">
+								<a href="store-information.html">
+									<div class="card">
+										<div class="card-body">
+											<div class="d-flex align-items-center">
+												<div class="icon-bg-lg bg-light">
+													<ion-icon name="gift-outline"></ion-icon>
+												</div>
+												<div class="ms-2">
+													<h4 class="card-title">Seller Deliveries</h4>
+													<span class="text-muted">Start to sell</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col">
+								<a href="manage-return-orders.html">
+									<div class="card">
+										<div class="card-body">
+											<div class="d-flex align-items-center">
+												<div class="icon-bg-lg bg-light">
+													<ion-icon name="reload-outline"></ion-icon>
+												</div>
+												<div class="ms-2">
+													<h4 class="card-title">Manage Return Orders</h4>
+													<span class="text-muted">Get your products ready</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col">
+								<a href="manage-reviews.html">
+									<div class="card">
+										<div class="card-body">
+											<div class="d-flex align-items-center">
+												<div class="icon-bg-lg bg-light">
+													<ion-icon name="star-outline"></ion-icon>
+												</div>
+												<div class="ms-2">
+													<h4 class="card-title">Manage Reviews</h4>
+													<span class="text-muted">Safeguard your account</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
 						
                         <div class="row g-3">
                             <div class="col-xl-12">
                                 <div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-center">
-										<a class="btn btn-default" type="button">
-                                            <ion-icon name="gift" class="me-2"></ion-icon> Seller Deliveries
-                                        </a>
-										<div class="dropdown">
-											<button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-												<ion-icon name="document" class="me-2"></ion-icon> Export
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-												<li><a class="dropdown-item" href="#">Export all orders</a></li>
-												<li><a class="dropdown-item" href="#">Export all unpaid orders</a></li>
-											</ul>
-										</div>
+									<div class="dropdown">
+										<button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+											<ion-icon name="document" class="me-2"></ion-icon> Export
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+											<li><a class="dropdown-item" href="#">Export all orders</a></li>
+											<li><a class="dropdown-item" href="#">Export all unpaid orders</a></li>
+										</ul>
 									</div>
-    
                                     <div class="dropdown">
                                         <button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                             <ion-icon name="filter" class="me-2"></ion-icon> Filter Orders
@@ -420,7 +460,7 @@
                                                 <span class="card-text fst-italic"><ion-icon name="return-up-forward-outline" class="me-1"></ion-icon> Pay via <b>Cash on Delivery</b></span>
                                             </div>
                                             <div class="col">
-                                                <span class="card-text fst-italic">Order Status <b class="text-primary">Pending</b> since 1 day ago</span>
+                                                <span class="card-text fst-italic">Order Status <b class="text-dark">Pending</b> since 1 day ago</span>
                                             </div>
                                             <div class="col">
                                                 <button type="button" class="btn btn-success w-100"><ion-icon name="print-sharp" class="me-2"></ion-icon> Print Shipping Label</button>
@@ -433,7 +473,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xl-12">
+							<div class="col-xl-12">
                                 <div class="card">
                                     <div class="card-header">
                                         <div class="d-flex justify-content-between align-items-center">
@@ -441,17 +481,6 @@
 												<ion-icon name="cube" class="fs-5"></ion-icon>
 												<span class="fw-bold ms-2">Order No. 490032921172827</span>
 											</a>
-                                            <div class="dropdown">
-                                                <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ion-icon name="ellipsis-vertical"></ion-icon>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">View Orders</a></li>
-                                                    <li><a class="dropdown-item" href="#">Send Order Confirmation</a></li>
-                                                    <li><a class="dropdown-item" href="#">Ready For Shipping</a></li>
-                                                    <li><a class="dropdown-item" href="#">Cancel Order</a></li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -460,10 +489,10 @@
                                                 <span class="card-text fst-italic"><ion-icon name="return-up-forward-outline" class="me-1"></ion-icon> Pay via <b>Trie Credits</b></span>
                                             </div>
                                             <div class="col">
-                                                <span class="card-text fst-italic">Order Status <b class="text-success">Delivered</b> (For Instant Delivery) </span>
+                                                <span class="card-text fst-italic">Order Status <b class="text-primary">For Delivery</b> (For Seller Delivery) </span>
                                             </div>
                                             <div class="col">
-                                                <button type="button" class="btn btn-secondary w-100"><ion-icon name="eye-sharp" class="me-2"></ion-icon> View Order Details</button>
+                                                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#orderInformationModal"><ion-icon name="eye-sharp" class="me-2"></ion-icon> View Order Details</button>
                                             </div>
                                         </div>
                                     </div>
@@ -481,15 +510,35 @@
 												<ion-icon name="cube" class="fs-5"></ion-icon>
 												<span class="fw-bold ms-2">Order No. 490032921172827</span>
 											</a>
-                                            <div class="dropdown">
-                                                <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <ion-icon name="ellipsis-vertical"></ion-icon>
-                                                </button>
-                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">View Order Details</a></li>
-                                                    <li><a class="dropdown-item" href="#">Send Order Proceeding Request</a></li>
-                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row row-cols-xl-3 row-cols-1 align-items-center g-3">
+                                            <div class="col">
+                                                <span class="card-text fst-italic"><ion-icon name="return-up-forward-outline" class="me-1"></ion-icon> Pay via <b>Trie Credits</b></span>
                                             </div>
+                                            <div class="col">
+                                                <span class="card-text fst-italic">Order Status <b class="text-success">Delivered</b> (For Instant Delivery) </span>
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#orderInformationModal"><ion-icon name="eye-sharp" class="me-2"></ion-icon> View Order Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span class="card-text"><small class="text-muted">Order Date March 29, 2021 17:28 PM</small></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
                                         </div>
                                     </div>
                                     <div class="card-body">
@@ -499,6 +548,9 @@
                                             </div>
                                             <div class="col">
                                                 <span class="card-text fst-italic">Order Status <b class="text-danger">Cancelled</b> (For Instant Delivery) </span>
+                                            </div>
+											<div class="col">
+                                                <button type="button" class="btn btn-secondary w-100" data-bs-toggle="modal" data-bs-target="#orderInformationModal"><ion-icon name="eye-sharp" class="me-2"></ion-icon> View Order Details</button>
                                             </div>
                                         </div>
                                     </div>
@@ -517,7 +569,7 @@
 	</div>
 
 	
-	<!-- Modal -->
+	<!-- Start Cancel Order -->
 	<div class="modal" id="cancelOrderModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
@@ -537,9 +589,42 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Cancel Order -->
+
+	<!-- Start Order Information -->
+	<div class="modal" id="orderInformationModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Order Information</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item">Order <b>#342031721141505</b></li>
+						<li class="list-group-item list-group-item-light">BAVIN P11 In-Ear Earphone 3.5mm Audio Jack Wired Headset Anti Fall Design Noise Reduction Stereo Earbuds Earphones</li>
+						<li class="list-group-item list-group-item-light">Color: <b>Black, Yellow</b></li>
+						<li class="list-group-item list-group-item-light">Size: <b>350 ml</b></li>
+						<li class="list-group-item list-group-item-light">Quantity: <b>3</b></li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Order Information -->
 
 	<!-- Global Scripts -->
     <script src="js/main.js"></script>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+	<!-- Ionic Modules -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 
 	<!-- Tippy -->
 	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>

@@ -354,7 +354,7 @@
                         </div>
                         <!-- End Breadcrumb -->
                         <div class="row g-3">
-                            <div class="col-xl-8">
+                            <div class="col-xl-12">
                                 <div class="row row-cols-1 g-3">
                                     <div class="col">
                                         <div class="section-heading">
@@ -365,9 +365,11 @@
                                                 <div class="row row-cols-1 g-3">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="product-name" class="form-label">Product Name</label>
+                                                            <label for="product-name" class="form-label d-flex align-items-center">
+                                                                <ion-icon name="information-circle-outline" class="me-2 fs-5" data-bs-toggle="popover" title="Proper product naming" data-bs-content="The name of your product should consist of the Brand, Model, important product's features and, if available, Color.Color should be put in brackets at the end of the name. Product names must be in Title Case and should not contain any special characters (# ! ?) except if it's a part of a trade name."></ion-icon> Product Name
+                                                            </label>
                                                             <input type="text" class="form-control" placeholder="Ex. Nikon Coolpix A300 Digital Camera" required>
-                                                            <div class="form-text">The name of your product. Recommend to have 20-40 words with unique selling points, so that your products will appear in search result 6x higher.</div>
+                                                            <div class="form-text">The name of your product. Recommend to have 20-40 words with unique selling points, so that your products will appear in search result 6x higher. <a href="" class="text-primary fw-bold">Learn more</a></div>
                                                         </div>
                                                     </div>
                                                     <div class="col">
@@ -426,7 +428,7 @@
 
                                     <div class="col">
                                         <div class="section-heading">
-                                            <span class="section-heading-title">Description</span>
+                                            <span class="section-heading-title"><ion-icon name="information-circle-outline" class="me-2 fs-5" data-bs-toggle="popover" title="Proper Description" data-bs-content="The product description should give the customer usefull information about the product to ensure a purchase."></ion-icon> Product Description</span>
                                         </div>
                                         <div class="card">
                                             <div class="card-body">
@@ -649,7 +651,7 @@
                                                 <div class="row row-cols-1 g-3">
                                                     <div class="col">
                                                         <div class="form-group">
-                                                            <label for="package-dimension" class="form-label">Package Dimensions (cm)</label>
+                                                            <label for="package-dimension" class="form-label"><ion-icon name="information-circle-outline" class="me-2 fs-5" data-bs-toggle="popover" title="Proper Dimension" data-bs-content="Please ensure you have entered the right package weight (kg) and dimensions (cm) to avoid incorrect shipping fee charges."></ion-icon> Package Dimensions (cm)</label>
                                                             <div class="row row-cols-3 g-3">
                                                                 <div class="col">
                                                                     <input type="number" name="" id="" class="form-control" placeholder="Length (cm)">
@@ -791,5 +793,11 @@
     <script src="https://cdn.tiny.cloud/1/zzubw4vq5fyaxdgpcaxa4zcfx43wyxc62zr3ii3a73exoddc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="js/editor.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
 </body>
 </html>
