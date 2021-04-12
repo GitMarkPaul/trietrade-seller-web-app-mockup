@@ -514,9 +514,8 @@ main {
 
 .sidebar .sidebar-menu .active {
   background-color: #cedff7;
-  border-right: 3px solid var(--color-primary);
-  border-bottom-left-radius: 23px;
-  border-top-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  border-top-right-radius: 23px;
 }
 
 .sidebar .sidebar-menu .sidebar-mb-pr {
@@ -531,8 +530,8 @@ main {
   background-color: var(--color-light-gray);
   -webkit-transition: ease-in-out 3ms;
   transition: ease-in-out 3ms;
-  border-bottom-left-radius: 23px;
-  border-top-left-radius: 23px;
+  border-bottom-right-radius: 23px;
+  border-top-right-radius: 23px;
 }
 
 .sidebar .sidebar-menu .sidebar-menu-items a {

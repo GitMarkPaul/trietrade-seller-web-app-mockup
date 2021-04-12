@@ -22,9 +22,8 @@
 
         .active {
             background-color: #cedff7;
-            border-right: 3px solid var(--color-primary);
-            border-bottom-left-radius: 23px;
-            border-top-left-radius: 23px;
+            border-bottom-right-radius: 23px;
+            border-top-right-radius: 23px;
         }
 
         .sidebar-mb-pr {
@@ -37,8 +36,8 @@
             &:hover {
                 background-color: var(--color-light-gray);
                 transition: ease-in-out 3ms;
-                border-bottom-left-radius: 23px;
-            border-top-left-radius: 23px;
+                border-bottom-right-radius: 23px;
+                border-top-right-radius: 23px;
             }
 
             a {
