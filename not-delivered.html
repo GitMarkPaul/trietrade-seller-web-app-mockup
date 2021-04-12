@@ -338,91 +338,88 @@
 					<div class="container-fluid">
 						<!-- Breadcrumb -->
 						<div class="mb-4">
-							<h4>Review Management</h4>
+							<h4>Parcel Not Delivered</h4>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                     <li class="breadcrumb-item"><a href="manage-orders.html">Manage Orders</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Product Reviews</li>
+                                    <li class="breadcrumb-item active" aria-current="page">For Delivery</li>
                                 </ol>
                             </nav>
 						</div>
 						<!-- End Breadcrumb -->
 						
                         <div class="row g-3">
+                            
                             <div class="col-xl-12">
                                 <ul class="nav nav-pills" id="pills-tab" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" type="button" role="tab" aria-controls="pills-product-reviews" aria-selected="true">Product Reviews</button>
+                                        <a href="for-delivery.html" class="nav-link" type="button" role="tab" aria-controls="pills-delivery" aria-selected="true">For Delivery</a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a href="seller-reviews.html" class="nav-link" type="button" role="tab" aria-controls="pills-seller-reviews" aria-selected="false">Seller Reviews</a>
+                                        <a href="delivered.html" class="nav-link" type="button" role="tab" aria-controls="pills-delivered" aria-selected="false">Delivered</a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" type="button" role="tab" aria-controls="pills-not-delivered" aria-selected="false">Not Delivered</button>
                                     </li>
                                 </ul>
                             </div>
 
-							<div class="col-xl-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="star-rating">
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star-outline"></ion-icon>
-											<ion-icon name="star-outline"></ion-icon>
-											<ion-icon name="star-outline"></ion-icon>
-										</div>
+                            <div class="col-xl-12">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <div class="dropdown">
+                                        <button class="btn btn-default" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <ion-icon name="document" class="me-2"></ion-icon> Export
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Export as PDF</a></li>
+                                            <li><a class="dropdown-item" href="#">Export as Excel</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
 
-										<span>By: <b>Trietrade Customer</b> <span class="d-flex align-items-center text-success"><ion-icon name="shield-checkmark" class="me-2"></ion-icon> Verified Purchase</span></span>
-
-										<div class="mt-3">
-											<p class="fst-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores earum, quae dicta voluptates commodi perferendis reiciendis consequuntur illo quo ad sapiente dolores officiis dignissimos quaerat expedita enim vel consequatur maxime.</p>
-										</div>
-
-										<div class="bg-light p-3">
-											<span class="d-flex align-items-center mb-3"><ion-icon name="storefront" class="me-2"></ion-icon> Response from Store - 27 October 2020</span>
-											<span>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-xl-12">
-								<div class="card">
-									<div class="card-body">
-										<div class="star-rating">
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star"></ion-icon>
-											<ion-icon name="star-outline"></ion-icon>
-										</div>
-
-										<span>By: <b>Trietrade Customer</b> <span class="d-flex align-items-center text-success"><ion-icon name="shield-checkmark" class="me-2"></ion-icon> Verified Purchase</span></span>
-
-										<div class="mt-3">
-											<p class="fst-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores earum, quae dicta voluptates commodi perferendis reiciendis consequuntur illo quo ad sapiente dolores officiis dignissimos quaerat expedita enim vel consequatur maxime.</p>
-										</div>
-
-										<div class="bg-light p-3">
-											<span class="d-flex align-items-center mb-3"><ion-icon name="storefront" class="me-2"></ion-icon> Response from Store</span>
-											
-											<form action="">
-												<div class="row row-cols-1 g-3">
-													<div class="col">
-														<div class="form-group">
-															<textarea name="" class="form-control" id="" cols="2" rows="2" placeholder="Type your reply here..."></textarea>
-														</div>
-													</div>
-													<div class="col">
-														<button type="submit" class="btn btn-warning">Submit Reply</button>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-
+                            <div class="col-xl-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <div class="d-flex justify-content-between align-items-center">
+											<a href="" class="d-flex align-items-center">
+												<ion-icon name="cube" class="fs-5"></ion-icon>
+												<span class="fw-bold ms-2">Order No. 490032921172827</span>
+											</a>
+                                            <div class="dropdown">
+                                                <button class="btn btn-default btn-circle-sm" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#orderDetails">View Orders Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row row-cols-xl-3 row-cols-1 align-items-center g-3">
+                                            <div class="col">
+                                                <span class="card-text fst-italic"><ion-icon name="person-outline" class="me-1"></ion-icon> Buyer <b>Jane Doe Smith</b></span><br>
+                                                <span class="card-text fst-italic"><ion-icon name="call-outline" class="me-1"></ion-icon> Contact No. <b>09124877093485</b></span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="card-text">Amount <b>₱396.00</b></span><br>
+                                                <span class="card-text fst-italic"><ion-icon name="return-up-forward-outline" class="me-1"></ion-icon> Pay via <b>Cash on Delivery</b></span>
+                                            </div>
+                                            <div class="col">
+                                                <span class="card-text fst-italic"><ion-icon name="location-outline" class="me-1"></ion-icon> <b>BLK 012 Brgy. BULAON PAMPANGA-SAN-FERNANDO-CITY, PAMPANGA</b> <span class="badge bg-primary">Home</span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-footer-flex">
+                                            <span class="card-text"><small class="text-muted">Tracking No. <b>7271031621112847</b></small></span>
+                                            <span class="card-text"><small class="text-muted">Order Date March 29, 2021 17:28 PM</small></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 					</div>
@@ -430,6 +427,31 @@
 			</main>
 		</div>
 	</div>
+
+    <!-- Start Order Information -->
+	<div class="modal" id="orderDetails" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="staticBackdropLabel">Order Details</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<ul class="list-group">
+						<li class="list-group-item">Order <b>#342031721141505</b></li>
+						<li class="list-group-item list-group-item-light">BAVIN P11 In-Ear Earphone 3.5mm Audio Jack Wired Headset Anti Fall Design Noise Reduction Stereo Earbuds Earphones</li>
+						<li class="list-group-item list-group-item-light">Color: <b>Black</b></li>
+						<li class="list-group-item list-group-item-light">Size: <b>350 ml</b></li>
+						<li class="list-group-item list-group-item-light">Quantity: <b>1</b></li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Order Information -->
 
 	<!-- Global Scripts -->
     <script src="js/main.js"></script>

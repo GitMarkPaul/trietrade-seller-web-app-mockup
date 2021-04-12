@@ -1,26 +1,16 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
 html {
     scroll-behavior: smooth;
-    box-sizing: border-box;
-    height: 100vh;
+}
+html, body {
+    overflow-x: hidden;
+    height: 100vh; 
 }
 
-html, body {
+body {
     font-family: var(--font-family-poppins);
     background: var(--body-default-bg);
     font-size: 0.9375rem;
     line-height: 1.75; 
-    overflow-x: hidden; 
 }
 
 a {

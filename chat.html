@@ -21,8 +21,6 @@
 
     <!-- CSS -->
 	<link rel="stylesheet" href="sass/main.css">
-	<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
-
     <style>
         html, body {
             position: fixed;
@@ -30,6 +28,8 @@
         }
         /* Let's get this party started */
         ::-webkit-scrollbar {
+            position: absolute;
+            right: 0;
             width: 5px;
         }
 
@@ -57,7 +57,7 @@
 <body>
     <div class="chat-wrapper">
         <!-- Mobile Tabs -->
-        <ul class="navbar-mb-tabs">
+        <!-- <ul class="navbar-mb-tabs">
             <li class="navbar-mb-tab-items">
                 <a href="index.html" class="btn btn-default bg-light btn-circle">
                     <ion-icon name="storefront-outline"></ion-icon>
@@ -89,7 +89,7 @@
                     <ion-icon name="pricetags-outline"></ion-icon>
                 </a>
             </li>
-        </ul>
+        </ul> -->
         <!-- End Mobile Tabs -->
         <aside>
             <div class="container-fluid">
@@ -299,9 +299,10 @@
             <div class="container-fluid">
                 <div class="chat-convo-header">
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                            <img src="img/user.jpg" alt="" class="rounded-circle" width="50" height="50">
-                            <div class="ms-3">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <a href="" class="chat-convo-header-chevron-back"><ion-icon name="chevron-back"></ion-icon></a>
+                            <img src="img/user.jpg" alt="" class="chat-convo-header-user-img rounded-circle">
+                            <div class="ms-3 mt-3">
                                 <h4 class="chat-convo-header-user">John Michael Cao</h4>
                                 <span class="chat-convo-header-availability">Active now</span>
                             </div>
@@ -460,7 +461,7 @@
                             </div>
 
                             <div class="chat-input-wrapper">
-                                <textarea name="" id="chat-input" cols="1" rows="1" class="form-control" placeholder="Compose a message..."></textarea>
+                                <textarea name="" id="chat-input" cols="1" rows="1" class="form-control" placeholder="Send message..."></textarea>
                             </div>
 
                             <button type="button" class="btn btn-default btn-lg ms-3">
@@ -540,6 +541,5 @@
 
     <!-- Fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
-
 </body>
 </html>

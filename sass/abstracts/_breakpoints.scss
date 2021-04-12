@@ -1,3 +1,14 @@
+@media only screen and (max-width: 1400px) {
+    // Chat
+    .chat-wrapper {
+        .chat-convo {
+            .chat-convo-body {
+                height: 92vmin;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     // Chat
     .chat-wrapper {
@@ -68,6 +79,39 @@
 
         .chat-messages {
             padding: 24px 0 24px 0;
+        }
+
+        .chat-convo {
+            .chat-convo-body {
+                width: 65%;
+                .chat-convo-buyer {
+                    width: 65%;
+
+                    .chat-convo-buyer-content {
+                        .chat-convo-images {
+                            a {
+                                img {
+                                    width: 65px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .chat-convo-seller {
+                    .chat-convo-seller-content {
+                        max-width: 65%;
+
+                        .chat-convo-images {
+                            a {
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -178,11 +222,68 @@
         }
 
         .chat-messages {
+            display: none;
             padding: 24px 12px 100px 12px;
         }
 
         .chat-convo {
-            display: none;
+            padding: 0;
+
+            .chat-convo-header {
+                position: relative;
+                width: 100%;
+                padding: 16px 0;
+
+                .chat-convo-header-chevron-back {
+                    display: block;
+                    margin-right: 12px;
+
+                    ion-icon {
+                        font-size: 32px;
+                    }
+                }
+
+                .chat-convo-header-user-img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .chat-convo-body {
+                height: 175vmin;
+                width: 102%;
+                padding-left: 0;
+                padding-right: 7px;
+
+                .chat-convo-buyer {
+                    .chat-convo-buyer-content {
+                        .chat-convo-images {
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                }
+
+                .chat-convo-seller {
+                    .chat-convo-seller-content {
+                        .chat-convo-images {
+                            grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                }
+            }
+
+            .chat-convo-input {
+                width: 100%;
+            }
+        }
+    }
+
+    // Card
+    .card {
+        .card-footer {
+            .card-footer-flex {
+                display: grid;
+            }
         }
     }
     

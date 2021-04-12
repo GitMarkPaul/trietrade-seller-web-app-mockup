@@ -102,10 +102,13 @@
             padding: 24px;
             z-index: 99;
 
-            .chat-convo-header-user {
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 0;
+            .chat-convo-header-chevron-back {
+                display: none;
+            }
+
+            .chat-convo-header-user-img {
+                width: 50px;
+                height: 50px;
             }
 
             .chat-convo-header-user {
@@ -113,7 +116,6 @@
                 font-weight: 600;
                 line-height: 0;
             }
-
             .chat-convo-header-availability {
                 font-size: 12px;
             }
@@ -123,8 +125,8 @@
             display: grid;
             overflow-y: auto;
             overflow-x: hidden;
-            height: 87vmin;
-            width: 63%;
+            height: 90vmin;
+            width: 64%;
             padding: 100px 24px 100px 24px;
 
             .chat-empty-state {
@@ -283,6 +285,7 @@
                 width: 100%;
 
                 textarea {
+                    border-radius: 20px;
                     resize: none;
                 }
             }
