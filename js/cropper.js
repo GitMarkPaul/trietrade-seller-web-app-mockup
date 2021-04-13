@@ -19,8 +19,8 @@ function readFile(input) {
 // Set viewport into cropper
 $uploadCrop = $('#upload-picture-to-crop').croppie({
     viewport: {
-        width: 130,
-        height: 130,
+        width: 150,
+        height: 150,
         type: 'circle'
     },
     enforceBoundary: false,
@@ -43,7 +43,7 @@ $('#cropImageBtn').on('click', function (ev) {
     $uploadCrop.croppie('result', {
         type: 'base64',
         format: 'jpeg',
-        size: {width: 130, height: 130}
+        size: {width: 150, height: 150}
     }).then(function (resp) {
         $('#item-img-output').attr('src', resp);
         $('#cropImagePop').modal('hide');

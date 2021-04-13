@@ -188,11 +188,6 @@
 							<!-- End Notification Wrapper -->
 							<div id="bg-overlay"></div>
 						</li>
-						<li class="navbar-items">
-							<button class="btn btn-default bg-light btn-circle tippy" data-bs-toggle="modal" data-bs-target="#languageSelector" type="button" data-tippy-content="Language">
-								<ion-icon name="language"></ion-icon>
-							</button>
-						</li>
 						<li>
 							<div class="btn-group">
 								<a href="#" class="tippy" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"  data-tippy-content="Account">
@@ -218,7 +213,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" href="store-information.html">
 											<div class="icon-bg bg-light">
 												<ion-icon name="storefront-outline"></ion-icon>
 											</div>
@@ -226,7 +221,7 @@
 										</a>
 									</li>
 									<li>
-										<a class="dropdown-item" href="#">
+										<a class="dropdown-item" href="bank-information.html">
 											<div class="icon-bg bg-light">
 												<ion-icon name="card-outline"></ion-icon>
 											</div>
@@ -330,6 +325,14 @@
 								<span class="ms-2">Settings</span>   
 							</a>
 						</li>
+						<li class="sidebar-menu-items">
+							<a href="language.html" class="d-flex align-items-center">
+								<div class="icon-bg bg-light">
+									<ion-icon name="language-outline"></ion-icon>
+								</div>
+								<span class="ms-2">Language</span>   
+							</a>
+						</li>
 					</ul>
 				</div>
 			</aside>
@@ -390,13 +393,13 @@
 										<form action="">
 											<div class="row g-3">
 												<div class="col-xl-12">
-													<div class="d-flex align-items-center">
-														<img src="img/user.jpg" id="item-img-output" alt="Username" class="rounded-circle img-responsive" width="130" height="130">
-														<div class="ms-3">
+													<div class="d-grid-center mb-4">
+														<img src="img/user.jpg" id="item-img-output" alt="Username" class="rounded-circle img-responsive" width="150" height="150">
+														<div>
 															<h4>Juan Dela Cruz</h4>
 															<p class="text-muted">jdc@gmail.com</p>
 
-															<div class="img-btn-uploader">
+															<div class="img-btn-uploader d-flex justify-content-center">
 																<button type="button" class="btn btn-primary d-flex align-items-center">
 																	<ion-icon name="camera-sharp" class="me-2"></ion-icon> Change Profile Picture
 																	<input type="file" class="item-img file" name="file_photo" />
@@ -405,49 +408,49 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="fname" class="form-label">First Name</label>
 														<input type="text" class="form-control" placeholder="Juan">
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="mname" class="form-label">Middle Name</label>
 														<input type="text" class="form-control" placeholder="Dela">
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="lname" class="form-label">Last Name</label>
 														<input type="text" class="form-control" placeholder="Cruz">
 													</div>
 												</div>
-												<div class="col-xl-6">
+												<div class="col-xl-6 col-md-6">
 													<div class="form-group">
 														<label for="email" class="form-label">Email</label>
 														<input type="email" class="form-control" placeholder="jdc@gmail.com">
 													</div>
 												</div>
-												<div class="col-xl-6">
+												<div class="col-xl-6 col-md-6">
 													<div class="form-group">
 														<label for="email" class="form-label">YouTube Channel Email </label>
 														<input type="email" class="form-control" placeholder="jdc.youtube@gmail.com">
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="phone" class="form-label">Phone Number</label>
 														<input type="tel" class="form-control" placeholder="Juan">
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="birthdate" class="form-label">Birthdate</label>
 														<input type="text" class="form-control datepicker">
 													</div>
 												</div>
-												<div class="col-xl-4">
+												<div class="col-xl-4 col-md-4">
 													<div class="form-group">
 														<label for="lname" class="form-label">Gender</label>
 														<select name="" class="form-select form-control">

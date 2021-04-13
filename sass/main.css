@@ -259,6 +259,12 @@ h6 {
   padding-bottom: 25px;
 }
 
+#upload-store-picture-to-crop {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 25px;
+}
+
 .star-rating ion-icon {
   color: var(--color-warning);
 }
@@ -370,6 +376,10 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.img-thumbnail {
+  border: none;
 }
 
 .dropdown-menu {
@@ -509,6 +519,7 @@ main {
 
 #toggle-sidebar {
   display: none;
+  margin-right: 10px;
 }
 
 .sidebar {
@@ -976,6 +987,16 @@ main {
 .chat-wrapper .chat-convo .chat-convo-input .chat-input-wrapper textarea {
   border-radius: 20px;
   resize: none;
+}
+
+.d-grid-center {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1400px) {
